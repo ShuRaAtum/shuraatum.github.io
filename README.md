@@ -1,3 +1,9 @@
-# shuraatum.github.io
+# Odin Knowledge Base
 
-테스트중입니다.
+Odin is a Jekyll template for knowledgebases and support sites. Please see the [official Jekyll docs](https://jekyllrb.com/docs/) for more info on running, building and editing a Jekyll site.
+
+*Full documentation is in the works and coming soon*
+
+
+
+
