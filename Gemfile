@@ -58,3 +58,8 @@ group :al_folio_plugins do
     gem 'al_comments', '= 1.0.0'
     gem 'al_newsletter', '= 1.0.0'
 end
+
+# Development/testing tools
+group :development do
+    gem 'html-proofer', '~> 5.0'
+end
