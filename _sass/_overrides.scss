@@ -23,3 +23,15 @@ html[data-theme="dark"] {
   font-family: "Pretendard", "Roboto Slab", sans-serif;
   font-weight: 700;
 }
+
+// Language switcher styling — distinct from regular nav items
+.lang-switcher {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  text-transform: none;
+  letter-spacing: 0;
+
+  &:hover {
+    opacity: 1;
+  }
+}

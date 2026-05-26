@@ -19,6 +19,6 @@
 {%- assign current_key = "strings_" | append: current_lang -%}
 {%- assign current_strings = site.data[current_key] -%}
 
-<a class="lang-switcher" href="{{ target | relative_url }}" hreflang="{{ other_lang }}">
+<a class="nav-link lang-switcher" href="{{ target | relative_url }}" hreflang="{{ other_lang }}">
   {{ current_strings.lang.switch_to_other }}
 </a>
