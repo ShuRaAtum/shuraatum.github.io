@@ -1,0 +1,20 @@
+# Visual companion (brainstorming) session data
+.superpowers/
+
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+vendor/
+
+# Ruby
+*.gem
+.rbenv-version
+
+# Node
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
