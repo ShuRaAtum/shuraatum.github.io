@@ -4,6 +4,9 @@ title: 소개
 permalink: /ko/
 lang: ko
 
+kicker: 암호 · 구현 · 연구
+tagline: 모든 것을 보호하는 수학을 더 빠르게.
+
 profile:
   align: right
   image: prof_pic.jpg
@@ -21,9 +24,7 @@ announcements:
   limit: 5
 
 latest_posts:
-  enabled: true
-  scrollable: true
-  limit: 3
+  enabled: false
 ---
 
 암호 알고리즘 최적화 구현을 연구하는 대학원생입니다.

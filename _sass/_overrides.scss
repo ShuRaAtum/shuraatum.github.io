@@ -35,3 +35,150 @@ html[data-theme="dark"] {
     opacity: 1;
   }
 }
+
+// ----------------------------------------------------------------------------
+// Editorial style overrides — applied to About page hero and section dividers.
+// Inspired by exaggerated minimalism: oversized name, single accent, generous
+// whitespace, monochrome body with the accent reserved for the punctuation dot
+// and links.
+// ----------------------------------------------------------------------------
+
+.editorial-about {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 1rem 0 4rem;
+}
+
+.editorial-hero {
+  padding: 2rem 0 1.5rem;
+}
+
+.editorial-kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+}
+
+.editorial-title {
+  margin: 0 0 0.75rem;
+  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(2.75rem, 9vw, 6.5rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+  color: var(--global-text-color);
+
+  // Korean override — Pretendard handles the heavy weight well, slightly less negative
+  :lang(ko) & {
+    font-family: "Pretendard", sans-serif;
+    letter-spacing: -0.03em;
+  }
+}
+
+.editorial-dot {
+  color: var(--global-theme-color);
+}
+
+.editorial-tagline {
+  margin: 0;
+  max-width: 38ch;
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--global-text-color);
+}
+
+.editorial-rule {
+  width: 48px;
+  border: none;
+  border-top: 3px solid var(--global-text-color);
+  margin: 2rem 0 0;
+}
+
+.editorial-body {
+  padding-top: 1rem;
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+
+  @media (min-width: 768px) {
+    grid-template-columns: minmax(0, 1fr) 220px;
+  }
+}
+
+.editorial-prose {
+  font-size: 1.05rem;
+  line-height: 1.7;
+
+  p {
+    margin-bottom: 1rem;
+  }
+}
+
+.editorial-aside {
+  font-size: 0.85rem;
+
+  .editorial-portrait {
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+}
+
+.editorial-aside-info {
+  margin-top: 0.75rem;
+  color: var(--global-text-color-light);
+  line-height: 1.5;
+
+  p {
+    margin: 0.2rem 0;
+  }
+}
+
+.editorial-section {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.editorial-section-label {
+  margin: 0 0 1.25rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+}
+
+.editorial-social {
+  .contact-icons {
+    font-size: 1.4rem;
+    a { margin-right: 0.6rem; }
+  }
+}
+
+// Make the navbar feel like part of the editorial system: lighter, more spaced.
+nav#navbar {
+  .navbar-brand {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .nav-link {
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .lang-switcher {
+    text-transform: none;
+    letter-spacing: 0;
+  }
+}

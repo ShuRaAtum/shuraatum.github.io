@@ -1,0 +1,80 @@
+---
+layout: default
+---
+<div class="post editorial-about">
+  <header class="post-header editorial-hero">
+    {% if page.kicker %}
+      <p class="editorial-kicker">{{ page.kicker }}</p>
+    {% else %}
+      <p class="editorial-kicker">{{ site.keywords | replace: ',', ' ·' }}</p>
+    {% endif %}
+
+    <h1 class="editorial-title">
+      {% if site.title == 'blank' %}
+        {{ site.first_name }}{{ site.middle_name }}{{ site.last_name }}<span class="editorial-dot">.</span>
+      {% else %}
+        {{ site.title }}<span class="editorial-dot">.</span>
+      {% endif %}
+    </h1>
+
+    {% if page.tagline %}
+      <p class="editorial-tagline">{{ page.tagline }}</p>
+    {% endif %}
+
+    <hr class="editorial-rule">
+  </header>
+
+  <article class="editorial-body">
+    <div class="editorial-grid">
+      <div class="editorial-prose">{{ content }}</div>
+
+      {% if page.profile %}
+        <aside class="editorial-aside">
+          {% if page.profile.image %}
+            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+            {% if page.profile.image_circular %}
+              {% assign profile_image_class = 'img-fluid editorial-portrait rounded-circle' %}
+            {% else %}
+              {% assign profile_image_class = 'img-fluid editorial-portrait' %}
+            {% endif %}
+            {% capture sizes %}(min-width: {{ site.max_width }}) 220px, 40vw"{% endcapture %}
+            {%
+              include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+              cache_bust=true
+            %}
+          {% endif %}
+          {% if page.profile.more_info %}
+            <div class="editorial-aside-info">{{ page.profile.more_info }}</div>
+          {% endif %}
+        </aside>
+      {% endif %}
+    </div>
+
+    {%- assign s = nil -%}
+    {%- if page.lang -%}
+      {%- assign strings_key = "strings_" | append: page.lang -%}
+      {%- assign s = site.data[strings_key] -%}
+    {%- endif -%}
+
+    {% if page.announcements and page.announcements.enabled %}
+      <section class="editorial-section">
+        <p class="editorial-section-label">{% if s %}{{ s.home.news_heading }}{% else %}news{% endif %}</p>
+        {% include news.liquid limit=true %}
+      </section>
+    {% endif %}
+
+    {% if page.selected_papers %}
+      <section class="editorial-section">
+        <p class="editorial-section-label">{% if s %}{{ s.home.selected_publications_heading }}{% else %}selected publications{% endif %}</p>
+        {% include selected_papers.liquid %}
+      </section>
+    {% endif %}
+
+    {% if page.social %}
+      <section class="editorial-section editorial-social">
+        <div class="contact-icons">{% social_links %}</div>
+        {% if site.contact_note %}<div class="contact-note">{{ site.contact_note }}</div>{% endif %}
+      </section>
+    {% endif %}
+  </article>
+</div>

@@ -4,12 +4,15 @@ title: about
 permalink: /en/
 lang: en
 
+kicker: Cryptography · Implementation · Research
+tagline: Optimizing the math that protects everything.
+
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false
   more_info: >
-    <p>Graduate student</p>
+    <p>Graduate Student</p>
     <p>Cryptography Lab</p>
 
 selected_papers: true
@@ -21,9 +24,7 @@ announcements:
   limit: 5
 
 latest_posts:
-  enabled: true
-  scrollable: true
-  limit: 3
+  enabled: false
 ---
 
 Graduate student researching optimized implementations of cryptographic algorithms.
