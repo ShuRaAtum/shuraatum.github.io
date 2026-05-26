@@ -1,0 +1,84 @@
+{%- assign lang = page.lang | default: "en" -%}
+{%- assign strings_key = "strings_" | append: lang -%}
+{%- assign s = site.data[strings_key] -%}
+
+<header>
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
+    <div class="container">
+      <a class="navbar-brand title font-weight-lighter" href="{{ '/' | append: lang | append: '/' | relative_url }}">
+        {% if site.title == 'blank' %}
+          {% if site.first_name %}<span class="font-weight-bold">{{- site.first_name -}}</span>{% endif %}
+          {% if site.middle_name %}{{- site.middle_name -}}{% endif %}
+          {% if site.last_name %}{{- site.last_name -}}{% endif %}
+        {% else %}
+          {{- site.title -}}
+        {% endif %}
+      </a>
+      <!-- Navbar Toggle -->
+      <button
+        class="navbar-toggler collapsed navbar-toggler-main"
+        type="button"
+        data-nav-toggle="navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav">
+        <ul class="navbar-nav navbar-menu-list flex-nowrap">
+          {%- assign about_url = '/' | append: lang | append: '/' -%}
+          {%- assign publications_url = '/' | append: lang | append: '/publications/' -%}
+          {%- assign projects_url = '/' | append: lang | append: '/projects/' -%}
+          {%- assign cv_url = '/' | append: lang | append: '/cv/' -%}
+          {%- assign blog_url = '/' | append: lang | append: '/blog/' -%}
+
+          <li class="nav-item {% if page.url == about_url %}active{% endif %}">
+            <a class="nav-link" href="{{ about_url | relative_url }}">{{ s.nav.about }}</a>
+          </li>
+          <li class="nav-item {% if page.url contains publications_url %}active{% endif %}">
+            <a class="nav-link" href="{{ publications_url | relative_url }}">{{ s.nav.publications }}</a>
+          </li>
+          <li class="nav-item {% if page.url contains projects_url %}active{% endif %}">
+            <a class="nav-link" href="{{ projects_url | relative_url }}">{{ s.nav.projects }}</a>
+          </li>
+          <li class="nav-item {% if page.url contains cv_url %}active{% endif %}">
+            <a class="nav-link" href="{{ cv_url | relative_url }}">{{ s.nav.cv }}</a>
+          </li>
+          <li class="nav-item {% if page.url contains blog_url %}active{% endif %}">
+            <a class="nav-link" href="{{ blog_url | relative_url }}">{{ s.nav.blog }}</a>
+          </li>
+
+          <!-- Language Switcher -->
+          <li class="nav-item">
+            {% include lang-switcher.html %}
+          </li>
+
+          {% if site.enable_darkmode %}
+            <!-- Toggle theme mode -->
+            <li class="toggle-container">
+              <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme">
+                <i class="fa-half-sun-moon" id="light-toggle-system"></i>
+                <i class="fa-solid fa-moon" id="light-toggle-dark"></i>
+                <i class="fa-solid fa-sun" id="light-toggle-light"></i>
+              </button>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {% if site.enable_progressbar %}
+    <!-- Scrolling Progress Bar -->
+    <progress id="progress" value="0">
+      <div class="progress-container">
+        <span class="progress-bar"></span>
+      </div>
+    </progress>
+  {% endif %}
+</header>
