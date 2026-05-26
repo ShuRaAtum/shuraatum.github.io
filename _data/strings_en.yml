@@ -1,0 +1,14 @@
+nav:
+  about: about
+  publications: publications
+  projects: projects
+  cv: cv
+  blog: blog
+home:
+  news_heading: news
+  selected_publications_heading: selected publications
+cv:
+  download_pdf: Download PDF
+lang:
+  switch_to_other: 한국어
+  current: EN

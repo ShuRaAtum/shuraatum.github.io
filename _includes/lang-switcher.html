@@ -1,0 +1,24 @@
+{%- comment -%}
+  Swaps the first path segment between /en and /ko.
+  Falls back to /en/ if neither prefix is present.
+{%- endcomment -%}
+{%- assign current_lang = page.lang | default: "en" -%}
+{%- if current_lang == "en" -%}
+  {%- assign other_lang = "ko" -%}
+{%- else -%}
+  {%- assign other_lang = "en" -%}
+{%- endif -%}
+{%- assign current_path = page.url -%}
+{%- assign segments = current_path | replace_first: "/" | split: "/" -%}
+{%- assign rest = "" -%}
+{%- for seg in segments offset:1 -%}
+  {%- assign rest = rest | append: "/" | append: seg -%}
+{%- endfor -%}
+{%- assign target = "/" | append: other_lang | append: rest -%}
+{%- if target == "/en" or target == "/ko" -%}{%- assign target = target | append: "/" -%}{%- endif -%}
+{%- assign current_key = "strings_" | append: current_lang -%}
+{%- assign current_strings = site.data[current_key] -%}
+
+<a class="lang-switcher" href="{{ target | relative_url }}" hreflang="{{ other_lang }}">
+  {{ current_strings.lang.switch_to_other }}
+</a>
