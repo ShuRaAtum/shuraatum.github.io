@@ -1,0 +1,25 @@
+// Pretendard font for Korean — CDN @import
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.css");
+
+// Accent color override (per design spec — Academic Blue)
+:root {
+  --global-theme-color: #0a66c2;
+  --global-hover-color: #084e94;
+}
+
+html[data-theme="dark"] {
+  --global-theme-color: #5aa3ec;
+  --global-hover-color: #7fbef0;
+}
+
+// Korean typography via :lang(ko)
+:lang(ko) {
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont,
+               "Roboto", "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.01em;
+}
+
+:lang(ko) h1, :lang(ko) h2, :lang(ko) h3, :lang(ko) h4 {
+  font-family: "Pretendard", "Roboto Slab", sans-serif;
+  font-weight: 700;
+}
