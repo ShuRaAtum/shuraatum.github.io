@@ -1,20 +1,18 @@
-# Visual companion (brainstorming) session data
 .superpowers/
-
-# Jekyll
-_site/
-.jekyll-cache/
+_site
+.bundle
+.DS_store
+.idea
+.jekyll-cache
 .jekyll-metadata
-.bundle/
-vendor/
-
-# Ruby
-*.gem
-.rbenv-version
-
-# Node
+.ruby-version
+.sass-cache
+.tweet-cache
+.venv
+assets/libs/
+assets/rendercv/rendercv_output/*.typ
+al-folio-upgrade-report.md
 node_modules/
-
-# OS
-.DS_Store
-Thumbs.db
+output/playwright/
+test-results/
+vendor
