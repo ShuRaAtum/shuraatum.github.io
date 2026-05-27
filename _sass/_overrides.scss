@@ -453,6 +453,149 @@ nav#navbar {
   }
 }
 
+// ----------------------------------------------------------------------------
+// Academic (A3) style — Modern Academic. Replaces editorial-* hero treatment.
+// Photo + name + affiliation as a horizontal hero block; small uppercase
+// section labels for "About", "Selected Publications", etc.
+// ----------------------------------------------------------------------------
+
+.academic-page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 1rem 0 4rem;
+}
+
+.academic-hero {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 1.4rem;
+  align-items: start;
+  margin: 1rem 0 2rem;
+
+  @media (max-width: 575.98px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.academic-hero-photo {
+  picture, figure { margin: 0; width: 120px; max-width: 100%; }
+
+  img {
+    width: 120px !important;
+    max-width: 100%;
+    height: 120px !important;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+  }
+}
+
+.academic-hero-info {
+  .academic-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.35rem;
+    line-height: 1.2;
+  }
+
+  .academic-role {
+    font-size: 0.95rem;
+    color: var(--global-text-color);
+    margin: 0 0 0.2rem;
+    line-height: 1.45;
+  }
+
+  .academic-affil {
+    font-size: 0.9rem;
+    color: var(--global-text-color-light);
+    margin: 0 0 0.15rem;
+    line-height: 1.45;
+
+    a {
+      color: var(--global-theme-color);
+      text-decoration: none;
+      &:hover { color: var(--global-hover-color); text-decoration: underline; }
+    }
+  }
+
+  :lang(ko) & .academic-name {
+    letter-spacing: -0.02em;
+  }
+}
+
+.academic-links {
+  margin-top: 0.7rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+
+  a {
+    color: var(--global-theme-color);
+    text-decoration: none;
+    &:hover { color: var(--global-hover-color); text-decoration: underline; }
+  }
+
+  .sep {
+    color: var(--global-divider-color);
+    margin: 0 0.4rem;
+    user-select: none;
+  }
+}
+
+.academic-section {
+  margin-top: 2rem;
+}
+
+.academic-section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+  margin: 0 0 0.7rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.academic-prose {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--global-text-color);
+
+  p { margin: 0 0 0.85rem; }
+  p:last-child { margin-bottom: 0; }
+  strong { font-weight: 600; }
+  a { color: var(--global-theme-color); }
+  a:hover { color: var(--global-hover-color); }
+}
+
+.academic-social {
+  margin-top: 2rem;
+
+  .contact-icons {
+    font-size: 1.25rem;
+    a { margin-right: 0.55rem; }
+  }
+}
+
+// Publications and Blog index pages — emitted by the local page.liquid
+// override (Task 5). The post-header is replaced with .academic-section-label.
+.academic-page-header {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+
+  .academic-section-label { margin-bottom: 0.4rem; }
+
+  .academic-page-description {
+    font-size: 0.95rem;
+    color: var(--global-text-color);
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
 @layer components {
   @media (min-width: 768px) {
     nav#navbar.navbar-expand-md .navbar-collapse-main {
