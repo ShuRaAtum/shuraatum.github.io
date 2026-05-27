@@ -345,6 +345,12 @@ html[data-theme="dark"] {
 
 // Editorial navbar polish: balanced vertical rhythm and consistent item sizing.
 nav#navbar {
+  // al-folio binds .container to site.max_width (930px). The navbar feels
+  // cramped on wide screens; give it more room while content stays narrow.
+  > .container {
+    max-width: 1200px;
+  }
+
   .navbar-brand {
     font-size: 1.05rem;
     font-weight: 800;
