@@ -4,27 +4,32 @@ title: about
 permalink: /en/
 lang: en
 
-kicker: Post-Quantum · Embedded · GPU
-tagline: Making cryptography faster on the hardware people actually use.
+role: "Ph.D. Candidate · Information & Computer Engineering"
+lab:
+  name: CryptoCraft Lab
+  url: https://sites.google.com/view/cc-hs
+university: Hansung University
+advisor:
+  name: Prof. Hwa-Jeong Seo
+  url: https://scholar.google.co.kr/citations?user=NJTYsz0AAAAJ
+
+links:
+  - label: Email
+    url: mailto:shuraatum@gmail.com
+  - label: CV
+    url: /en/cv/
+  - label: Scholar
+    url: https://scholar.google.com/citations?user=ygVA5cwAAAAJ
+  - label: GitHub
+    url: https://github.com/ShuRaAtum
 
 profile:
-  align: right
   image: prof_pic.jpg
-  image_circular: false
-  more_info: >
-    <p>Ph.D. Candidate</p>
-    <p><a href="https://sites.google.com/view/cc-hs">CryptoCraft Lab</a></p>
-    <p>Hansung University</p>
 
 selected_papers: true
 social: true
 
 announcements:
-  enabled: true
-  scrollable: true
-  limit: 5
-
-latest_posts:
   enabled: false
 ---
 
