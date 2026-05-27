@@ -180,6 +180,28 @@ html[data-theme="dark"] {
 // Project cards — text-only editorial treatment (no thumbnails).
 // Counters the al-folio default that expects an image at the top of each card.
 .projects {
+  // al-folio's `.projects .grid` has no actual CSS grid; it relies on
+  // a Masonry plugin / Bootstrap row-cols that we are not using. Without
+  // it the .col children just stack. Define a real responsive grid here.
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    @media (min-width: 576px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .col {
+    padding-bottom: 0;
+  }
+
   .card {
     border: 1px solid var(--global-divider-color);
     border-radius: 6px;
