@@ -1,0 +1,33 @@
+---
+layout: default
+---
+{% if page._styles %}
+  <style type="text/css">
+    {{ page._styles }}
+  </style>
+{% endif %}
+
+<div class="post academic-page">
+
+  <header class="academic-page-header">
+    <p class="academic-section-label">{{ page.title }}</p>
+    {% if page.description %}<p class="academic-page-description">{{ page.description }}</p>{% endif %}
+  </header>
+
+  <article>
+    {{ content }}
+  </article>
+
+  {% if page.related_publications %}
+    <section class="academic-section">
+      <p class="academic-section-label">references</p>
+      <div class="publications">
+        {% bibliography --cited_in_order %}
+      </div>
+    </section>
+  {% endif %}
+
+  {% if site.plugins contains 'al_comments' %}
+    {% include plugins/al_comments.liquid %}
+  {% endif %}
+</div>

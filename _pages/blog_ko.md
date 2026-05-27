@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 permalink: /ko/blog/
 title: 글
 description: 연구 노트, 논문 요약, 구현 노트.
