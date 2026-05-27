@@ -1,189 +1,161 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Si-Woo Eum
+  label: Ph.D. Candidate · CryptoCraft Lab · Hansung University
+  email: shuraatum@gmail.com
+  location: Seoul, South Korea
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary: >
+    Ph.D. candidate in Information and Computer Engineering at Hansung University,
+    specializing in platform-optimized cryptographic implementation. Active researcher
+    in post-quantum cryptography (PQC) benchmarking and embedded/GPU-accelerated
+    cryptographic engineering, with publications across SCI(E) journals and international
+    conferences, and contributions to multiple national cryptography research projects.
 
   social_networks:
-    - network: X
-      username: AlbertEinstein
     - network: GitHub
-      username: example
-    - network: LinkedIn
-      username: example
-
-  address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+      username: ShuRaAtum
+    - network: Google Scholar
+      username: ygVA5cwAAAAJ
+    - network: ORCID
+      username: 0000-0002-9583-5427
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
+      - institution: Hansung University
+        location: Seoul, South Korea
+        area: Information and Computer Engineering
+        studyType: Ph.D. Candidate
+        start_date: 2023-03
+        end_date: Present
         highlights:
-          - Description 1.
-          - Description 2.
+          - Advisor — Prof. Hwa-Jeong Seo, CryptoCraft Lab
+          - Research focus — platform-optimized cryptographic implementation
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
-        highlights:
-          - Description 1.
-          - Description 2.
+      - institution: Hansung University
+        location: Seoul, South Korea
+        area: IT Convergence Engineering
+        studyType: M.S.
+        start_date: 2021-03
+        end_date: 2023-02
 
-    Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
-        highlights:
-          - Relativity
-          - Description 2.
+      - institution: Hansung University
+        location: Seoul, South Korea
+        area: IT Convergence Engineering
+        studyType: B.S.
+        start_date: 2017-03
+        end_date: 2021-02
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
-        highlights:
-          - Description 1.
-          - Description 2.
-
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
-
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
-
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
-
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
-        highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+    Research Interests:
+      - name: Cryptographic Implementation
+        keywords: "Platform-optimized implementation, Post-quantum cryptography (KpqC, NIST PQC), Embedded crypto on ARM (Cortex-M, ARMv8/NEON) and RISC-V, GPU/CUDA-accelerated crypto, Symmetric-key crypto with SIMD parallelization, AI-agent-assisted cryptographic engineering"
 
     Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
-
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
-
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
-
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
-
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+      - title: National Cryptography Contest — Excellence Award
+        date: 2025
+      - title: National Cryptography Contest — Excellence Award
+        date: 2024
+      - title: Side-Channel Information Analysis Competition — Chair's Award
+        date: 2024
+      - title: Side-Channel Information Analysis Competition — Award
+        date: 2023
+      - title: Hansung University Graduate School — Best Master's Thesis Award
+        date: 2023
+      - title: Side-Channel Analysis Competition — KISA President's Award
+        date: 2022
+      - title: National Cryptography Contest — Special Award
+        date: 2022
+      - title: PlatCon '22 — Best Paper Award
+        date: 2022
+      - title: 1st "Digital Transformation Convergence Ideas" Contest — Grand Prize
+        date: 2022
+      - title: Quantum Information Competition — Special Award
+        date: 2022
+      - title: CISC-S — Best Paper Award
+        date: 2022
+      - title: AI+Security Idea Contest — Grand Prize
+        date: 2021
+      - title: ACK — Best Paper Award
+        date: 2021
+      - title: CISC-S — Best Paper Award
+        date: 2021
+      - title: ASK — Best Paper Award
+        date: 2021
+      - title: CISC Honam Chapter Conference — Best Paper Award
+        date: 2020
+      - title: 3rd Side-Channel Analysis Competition — Chair's Award
+        date: 2020
 
     Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - name: Programming Languages
+        keywords: "C, Python, Assembly (ARM, RISC-V)"
+      - name: Parallel & SIMD
+        keywords: "ARM NEON, CUDA, Metal (Apple Silicon)"
+      - name: Target Platforms
+        keywords: "ARM Cortex-M, ARMv8 (AArch64), RISC-V (RV32/RV64), NVIDIA GPU, Apple M1 GPU"
+      - name: Cryptography
+        keywords: "Post-Quantum (KpqC, NIST PQC), Symmetric-Key (AES, ARIA, LEA, PIPO, SM4, HIGHT, SEED), Hash (LSH, Argon2), Hash-Based Signatures (XMSS, SPHINCS+)"
+      - name: Protocols & Frameworks
+        keywords: "TLS 1.3 (Hybrid PQC), PKI/X.509, KpqClean Benchmark Suite"
+
+    Publications Summary:
+      - name: SCI(E) Journals
+        summary: "9 papers (Applied Sciences, Electronics, Sensors, Symmetry)"
+      - name: KCI Journals
+        summary: "8 papers (JKIISC, JKIICE, KTCCS, SMJ)"
+      - name: Preprints
+        summary: "3 papers (Cryptology ePrint Archive)"
+      - name: International Conferences
+        summary: "2 papers (ICISC 2025, PlatCon 2022 — Best Paper)"
+      - name: Domestic Conferences (Korea)
+        summary: "14+ presentations (CISC-S, CISC-W, ASK, ACK, regional chapters)"
+
+    Research Projects:
+      - name: Blockchain Core Technologies & Future Innovative Talent Training (IITP)
+        start_date: 2026-01
+        end_date: 2027-12
+        summary: Participating Researcher
+      - name: Homomorphic Encryption Application Guidelines (Korea Cryptography Forum)
+        start_date: 2026-05
+        end_date: 2026-11
+      - name: KpqC Implementation Guidelines in Lightweight Environments (NSR)
+        start_date: 2026-04
+        end_date: 2026-10
+      - name: S/HBOM-based Supply Chain Protection for Industrial Control Systems (IITP)
+        start_date: 2025-07
+        end_date: 2027-12
+      - name: KpqC Post-Quantum Algorithm Implementation and Testing (ETRI)
+        start_date: 2025-07
+        end_date: 2025-10
+      - name: National Network Security Framework (N²SF) for PQC Transition (Korea Cryptography Forum)
+        start_date: 2025-05
+        end_date: 2025-11
+      - name: PQC-based Joint Certificate PKI Infrastructure (IITP)
+        start_date: 2025-04
+        end_date: 2028-12
+      - name: KpqC Selected Algorithm Implementation Optimization (NSR)
+        start_date: 2025-05
+        end_date: 2025-11
+      - name: Satellite Cybersecurity Policy and Technology (Korea Cryptography Forum)
+        start_date: 2024-07
+        end_date: 2024-11
+      - name: Post-Quantum Cryptography Practical Implementation (NSR)
+        start_date: 2024-04
+        end_date: 2024-09
+      - name: KpqC Competition Algorithms — Performance Comparison (NSR)
+        start_date: 2023-04
+        end_date: 2023-10
+      - name: NIST-PQC Key Exchange Techniques and Comparison (Korea Cryptography Society)
+        start_date: 2023-02
+        end_date: 2023-11
+      - name: GPU/ASIC-based High-Speed Cryptographic Algorithm Implementation (IITP)
+        start_date: 2021-04
+        end_date: 2023-12
+      - name: NIST Post-Quantum Cryptography Benchmarks on ARM Cortex-M4 and RISC-V (NRF)
+        start_date: 2020-06
+        end_date: 2023-02
 
     Languages:
-      - name: German
-        summary: "Native speaker"
-
+      - name: Korean
+        summary: Native
       - name: English
-        summary: "Fluent"
-
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+        summary: Professional working proficiency

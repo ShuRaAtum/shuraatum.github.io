@@ -166,6 +166,100 @@ html[data-theme="dark"] {
   }
 }
 
+// CV page — structured editorial CV
+.cv-page {
+  .editorial-title--small {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+  }
+
+  .cv-pdf-link {
+    margin-left: 0.6rem;
+    font-size: 0.55em;
+    color: var(--global-theme-color);
+    vertical-align: middle;
+    &:hover { color: var(--global-hover-color); }
+  }
+
+  .cv-summary {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--global-text-color);
+    margin: 0 0 0.5rem;
+    max-width: 65ch;
+  }
+
+  .cv-meta {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+}
+
+.cv-section-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cv-entry {
+  margin-bottom: 1.1rem;
+  &:last-child { margin-bottom: 0; }
+}
+
+.cv-entry-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.25rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: 9rem 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.cv-entry-when {
+  font-size: 0.78rem;
+  color: var(--global-text-color-light);
+  font-variant-numeric: tabular-nums;
+  padding-top: 0.15rem;
+}
+
+.cv-entry-body {
+  font-size: 0.92rem;
+  line-height: 1.55;
+
+  strong { font-weight: 700; }
+}
+
+.cv-entry-where {
+  color: var(--global-text-color-light);
+  font-size: 0.85rem;
+}
+
+.cv-entry-keywords {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.8rem;
+  color: var(--global-text-color-light);
+  line-height: 1.5;
+}
+
+.cv-entry-highlights {
+  margin: 0.35rem 0 0;
+  padding-left: 1rem;
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  line-height: 1.55;
+  li { margin-bottom: 0.15rem; }
+}
+
+.cv-entry-summary {
+  margin: 0.3rem 0 0;
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  line-height: 1.55;
+}
+
 // Make the navbar feel like part of the editorial system: lighter, more spaced.
 nav#navbar {
   .navbar-brand {

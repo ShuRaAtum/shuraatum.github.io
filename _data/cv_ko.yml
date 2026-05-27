@@ -1,0 +1,159 @@
+cv:
+  name: 음시우 (Si-Woo Eum)
+  label: 박사과정 · CryptoCraft Lab · 한성대학교
+  email: shuraatum@gmail.com
+  location: 서울, 대한민국
+  image: ""
+  summary: >
+    한성대학교 정보컴퓨터공학과 박사과정으로, 플랫폼 최적화 암호 구현을 전공합니다.
+    양자내성암호(PQC) 벤치마킹과 임베디드/GPU 가속 암호 엔지니어링을 활발히 연구하며,
+    SCI(E) 학술지와 국제 학회에 다수 게재했고 여러 국가 암호 연구 과제에 참여하고 있습니다.
+
+  social_networks:
+    - network: GitHub
+      username: ShuRaAtum
+    - network: Google Scholar
+      username: ygVA5cwAAAAJ
+    - network: ORCID
+      username: 0000-0002-9583-5427
+
+  sections:
+    학력:
+      - institution: 한성대학교
+        location: 서울, 대한민국
+        area: 정보컴퓨터공학과
+        studyType: 박사과정
+        start_date: 2023-03
+        end_date: 재학중
+        highlights:
+          - 지도교수 — 서화정 교수, CryptoCraft Lab
+          - 연구 주제 — 플랫폼 최적화 암호 구현
+
+      - institution: 한성대학교
+        location: 서울, 대한민국
+        area: IT융합공학과
+        studyType: 석사
+        start_date: 2021-03
+        end_date: 2023-02
+
+      - institution: 한성대학교
+        location: 서울, 대한민국
+        area: IT융합공학과
+        studyType: 학사
+        start_date: 2017-03
+        end_date: 2021-02
+
+    연구 관심사:
+      - name: 암호 구현
+        keywords: "플랫폼 최적화 구현, 양자내성암호(KpqC, NIST PQC), ARM(Cortex-M, ARMv8/NEON) 및 RISC-V 임베디드 암호, GPU/CUDA 가속 암호, SIMD 병렬화 대칭키 암호, AI 에이전트 기반 암호 엔지니어링"
+
+    수상:
+      - title: 전국 암호 공모전 — 우수상
+        date: 2025
+      - title: 전국 암호 공모전 — 우수상
+        date: 2024
+      - title: 부채널 정보 분석 경진대회 — 위원장상
+        date: 2024
+      - title: 부채널 정보 분석 경진대회 — 입상
+        date: 2023
+      - title: 한성대학교 대학원 — 우수 석사학위 논문상
+        date: 2023
+      - title: 부채널 분석 경진대회 — KISA 원장상
+        date: 2022
+      - title: 전국 암호 공모전 — 특별상
+        date: 2022
+      - title: PlatCon '22 — Best Paper Award
+        date: 2022
+      - title: 제1회 디지털 전환 융합 아이디어 공모전 — 대상
+        date: 2022
+      - title: 양자정보 경진대회 — 특별상
+        date: 2022
+      - title: CISC-S — 우수 논문상
+        date: 2022
+      - title: AI+보안 아이디어 공모전 — 대상
+        date: 2021
+      - title: ACK — 우수 논문상
+        date: 2021
+      - title: CISC-S — 우수 논문상
+        date: 2021
+      - title: ASK — 우수 논문상
+        date: 2021
+      - title: CISC 호남지부 학술대회 — 우수 논문상
+        date: 2020
+      - title: 제3회 부채널 분석 경진대회 — 위원장상
+        date: 2020
+
+    기술 스택:
+      - name: 프로그래밍 언어
+        keywords: "C, Python, Assembly (ARM, RISC-V)"
+      - name: 병렬·SIMD
+        keywords: "ARM NEON, CUDA, Metal (Apple Silicon)"
+      - name: 대상 플랫폼
+        keywords: "ARM Cortex-M, ARMv8 (AArch64), RISC-V (RV32/RV64), NVIDIA GPU, Apple M1 GPU"
+      - name: 암호
+        keywords: "양자내성 (KpqC, NIST PQC), 대칭키 (AES, ARIA, LEA, PIPO, SM4, HIGHT, SEED), 해시 (LSH, Argon2), 해시 기반 서명 (XMSS, SPHINCS+)"
+      - name: 프로토콜·프레임워크
+        keywords: "TLS 1.3 (Hybrid PQC), PKI/X.509, KpqClean Benchmark Suite"
+
+    논문 요약:
+      - name: SCI(E) 학술지
+        summary: "9편 (Applied Sciences, Electronics, Sensors, Symmetry)"
+      - name: KCI 학술지
+        summary: "8편 (JKIISC, JKIICE, KTCCS, SMJ)"
+      - name: Preprint
+        summary: "3편 (Cryptology ePrint Archive)"
+      - name: 국제 학회
+        summary: "2편 (ICISC 2025, PlatCon 2022 — Best Paper)"
+      - name: 국내 학회
+        summary: "14편 이상 (CISC-S, CISC-W, ASK, ACK 및 지부 학술대회)"
+
+    참여 과제:
+      - name: 블록체인 핵심 기술 및 미래 혁신 인재 양성 (IITP)
+        start_date: 2026-01
+        end_date: 2027-12
+        summary: 참여 연구원
+      - name: 동형암호 활용 사례 분석 및 가이드라인 개발 (한국암호포럼)
+        start_date: 2026-05
+        end_date: 2026-11
+      - name: 경량 환경 KpqC 알고리즘 구현 가이드라인 연구 (NSR)
+        start_date: 2026-04
+        end_date: 2026-10
+      - name: 산업제어시스템 S/HBOM 기반 공급망 보호·보안 강화 기술 (IITP)
+        start_date: 2025-07
+        end_date: 2027-12
+      - name: KpqC 양자내성암호 알고리즘 구현·검증 (ETRI)
+        start_date: 2025-07
+        end_date: 2025-10
+      - name: PQC 전환을 위한 N²SF·국가 암호 적용 기준 고도화 (한국암호포럼)
+        start_date: 2025-05
+        end_date: 2025-11
+      - name: PQC 기반 공동 인증서 PKI 인프라 기술 (IITP)
+        start_date: 2025-04
+        end_date: 2028-12
+      - name: KpqC 공모 선정 알고리즘 구현 최적화 (NSR)
+        start_date: 2025-05
+        end_date: 2025-11
+      - name: 위성 사이버보안 정책·기술 연구 (한국암호포럼)
+        start_date: 2024-07
+        end_date: 2024-11
+      - name: 양자내성암호 실용화 구현 연구 (NSR)
+        start_date: 2024-04
+        end_date: 2024-09
+      - name: KpqC 공모 알고리즘 성능 비교·분석 (NSR)
+        start_date: 2023-04
+        end_date: 2023-10
+      - name: 미국 NIST-PQC 키 교환 기법 성능 비교 (한국암호학회)
+        start_date: 2023-02
+        end_date: 2023-11
+      - name: GPU/ASIC 기반 암호 알고리즘 고속 구현 기술 (IITP)
+        start_date: 2021-04
+        end_date: 2023-12
+      - name: ARM Cortex-M4 및 RISC-V 위 NIST PQC 벤치마크 (NRF)
+        start_date: 2020-06
+        end_date: 2023-02
+
+    언어:
+      - name: 한국어
+        summary: 모국어
+      - name: 영어
+        summary: 업무 능숙

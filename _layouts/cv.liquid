@@ -1,0 +1,84 @@
+---
+layout: default
+---
+{%- assign lang = page.lang | default: "en" -%}
+{%- if lang == "ko" -%}
+  {%- assign cv_data = site.data.cv_ko.cv -%}
+{%- else -%}
+  {%- assign cv_data = site.data.cv.cv -%}
+{%- endif -%}
+
+<div class="cv-page editorial-about">
+  <header class="post-header editorial-hero">
+    <h1 class="editorial-title editorial-title--small">
+      {{ cv_data.name | default: page.title }}<span class="editorial-dot">.</span>
+      {% if page.cv_pdf %}
+        <a class="cv-pdf-link" href="{{ page.cv_pdf | relative_url }}" target="_blank" rel="noopener noreferrer" title="Download PDF">
+          <i class="fa-solid fa-file-pdf"></i>
+        </a>
+      {% endif %}
+    </h1>
+    {% if cv_data.label %}<p class="editorial-tagline">{{ cv_data.label }}</p>{% endif %}
+    <hr class="editorial-rule">
+  </header>
+
+  <article class="editorial-body cv-content">
+    {% if cv_data.summary %}
+      <p class="cv-summary">{{ cv_data.summary }}</p>
+    {% endif %}
+
+    {% if cv_data.location or cv_data.email %}
+      <p class="cv-meta">
+        {% if cv_data.email %}<a href="mailto:{{ cv_data.email }}">{{ cv_data.email }}</a>{% endif %}
+        {% if cv_data.email and cv_data.location %} · {% endif %}
+        {% if cv_data.location %}{{ cv_data.location }}{% endif %}
+      </p>
+    {% endif %}
+
+    {% for section in cv_data.sections %}
+      {%- assign section_name = section[0] -%}
+      {%- assign entries = section[1] -%}
+      <section class="editorial-section">
+        <p class="editorial-section-label">{{ section_name }}</p>
+
+        <ul class="cv-section-list">
+          {% for entry in entries %}
+            <li class="cv-entry">
+              <div class="cv-entry-row">
+                <div class="cv-entry-when">
+                  {% if entry.start_date or entry.end_date %}
+                    <span>{{ entry.start_date }}{% if entry.end_date %} — {{ entry.end_date }}{% endif %}</span>
+                  {% elsif entry.date %}
+                    <span>{{ entry.date }}</span>
+                  {% endif %}
+                </div>
+                <div class="cv-entry-body">
+                  {%- if entry.institution -%}
+                    <strong>{{ entry.studyType }}, {{ entry.area }}</strong><br>
+                    <span class="cv-entry-where">{{ entry.institution }}{% if entry.location %} · {{ entry.location }}{% endif %}</span>
+                  {%- elsif entry.company -%}
+                    <strong>{{ entry.position }}</strong><br>
+                    <span class="cv-entry-where">{{ entry.company }}{% if entry.location %} · {{ entry.location }}{% endif %}</span>
+                  {%- elsif entry.title -%}
+                    {{ entry.title }}
+                  {%- elsif entry.name -%}
+                    <strong>{{ entry.name }}</strong>
+                    {%- if entry.summary %}<br><span class="cv-entry-where">{{ entry.summary }}</span>{%- endif -%}
+                    {%- if entry.keywords %}<br><span class="cv-entry-keywords">{{ entry.keywords }}</span>{%- endif -%}
+                  {%- endif -%}
+
+                  {% if entry.highlights %}
+                    <ul class="cv-entry-highlights">
+                      {% for hl in entry.highlights %}<li>{{ hl }}</li>{% endfor %}
+                    </ul>
+                  {% endif %}
+                  {% if entry.summary and entry.company %}<p class="cv-entry-summary">{{ entry.summary }}</p>{% endif %}
+                </div>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endfor %}
+  </article>
+</div>
