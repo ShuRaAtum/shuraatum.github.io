@@ -1,9 +1,9 @@
 nav:
-  about: about
-  publications: publications
-  projects: projects
-  cv: cv
-  blog: blog
+  about: About
+  publications: Publications
+  projects: Projects
+  cv: CV
+  blog: Blog
 home:
   about_heading: about
   news_heading: news
