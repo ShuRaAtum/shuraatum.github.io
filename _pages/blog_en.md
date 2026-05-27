@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 permalink: /en/blog/
 title: blog
 description: Research notes, paper summaries, implementation deep-dives.

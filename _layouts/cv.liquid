@@ -8,21 +8,21 @@ layout: default
   {%- assign cv_data = site.data.cv.cv -%}
 {%- endif -%}
 
-<div class="cv-page editorial-about">
-  <header class="post-header editorial-hero">
-    <h1 class="editorial-title editorial-title--small">
-      {{ cv_data.name | default: page.title }}<span class="editorial-dot">.</span>
+<div class="post academic-page cv-page">
+
+  <header class="academic-page-header">
+    <p class="academic-section-label">
+      {{ page.title }}
       {% if page.cv_pdf %}
         <a class="cv-pdf-link" href="{{ page.cv_pdf | relative_url }}" target="_blank" rel="noopener noreferrer" title="Download PDF">
           <i class="fa-solid fa-file-pdf"></i>
         </a>
       {% endif %}
-    </h1>
-    {% if cv_data.label %}<p class="editorial-tagline">{{ cv_data.label }}</p>{% endif %}
-    <hr class="editorial-rule">
+    </p>
+    {% if cv_data.label %}<p class="academic-page-description">{{ cv_data.label }}</p>{% endif %}
   </header>
 
-  <article class="editorial-body cv-content">
+  <article class="cv-content">
     {% if cv_data.summary %}
       <p class="cv-summary">{{ cv_data.summary }}</p>
     {% endif %}
@@ -38,8 +38,8 @@ layout: default
     {% for section in cv_data.sections %}
       {%- assign section_name = section[0] -%}
       {%- assign entries = section[1] -%}
-      <section class="editorial-section">
-        <p class="editorial-section-label">{{ section_name }}</p>
+      <section class="academic-section">
+        <p class="academic-section-label">{{ section_name }}</p>
 
         <ul class="cv-section-list">
           {% for entry in entries %}

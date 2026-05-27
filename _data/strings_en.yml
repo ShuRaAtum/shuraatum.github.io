@@ -5,6 +5,7 @@ nav:
   cv: cv
   blog: blog
 home:
+  about_heading: about
   news_heading: news
   selected_publications_heading: selected publications
 cv:

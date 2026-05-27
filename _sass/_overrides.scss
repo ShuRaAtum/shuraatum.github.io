@@ -36,148 +36,7 @@ html[data-theme="dark"] {
   }
 }
 
-// ----------------------------------------------------------------------------
-// Editorial style overrides — applied to About page hero and section dividers.
-// Inspired by exaggerated minimalism: oversized name, single accent, generous
-// whitespace, monochrome body with the accent reserved for the punctuation dot
-// and links.
-// ----------------------------------------------------------------------------
-
-.editorial-about {
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 1rem 0 4rem;
-}
-
-.editorial-hero {
-  padding: 2rem 0 1.5rem;
-}
-
-.editorial-kicker {
-  margin: 0 0 0.5rem;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--global-text-color-light);
-}
-
-.editorial-title {
-  margin: 0 0 0.75rem;
-  font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
-  font-size: clamp(2.75rem, 9vw, 6.5rem);
-  font-weight: 900;
-  letter-spacing: -0.04em;
-  line-height: 0.95;
-  color: var(--global-text-color);
-
-  // Korean override — Pretendard handles the heavy weight well, slightly less negative
-  :lang(ko) & {
-    font-family: "Pretendard", sans-serif;
-    letter-spacing: -0.03em;
-  }
-}
-
-.editorial-dot {
-  color: var(--global-theme-color);
-}
-
-.editorial-tagline {
-  margin: 0;
-  max-width: 38ch;
-  font-size: clamp(1rem, 1.6vw, 1.3rem);
-  font-weight: 400;
-  line-height: 1.4;
-  color: var(--global-text-color);
-}
-
-.editorial-rule {
-  width: 48px;
-  border: none;
-  border-top: 3px solid var(--global-text-color);
-  margin: 2rem 0 0;
-}
-
-.editorial-body {
-  padding-top: 1rem;
-}
-
-.editorial-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  align-items: start;
-
-  @media (min-width: 768px) {
-    grid-template-columns: minmax(0, 1fr) 160px;
-  }
-}
-
-.editorial-prose {
-  font-size: 1.05rem;
-  line-height: 1.7;
-
-  p {
-    margin-bottom: 1rem;
-  }
-}
-
-.editorial-aside {
-  font-size: 0.85rem;
-
-  // The al-folio figure include emits an <img> with inline `width="100%"`
-  // and `height="auto"`. Force a square box that crops the portrait
-  // regardless of source aspect ratio.
-  picture, figure {
-    margin: 0;
-    width: 160px;
-    max-width: 100%;
-  }
-
-  .editorial-portrait {
-    width: 160px !important;
-    max-width: 100%;
-    height: 160px !important;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 4px;
-    display: block;
-  }
-}
-
-.editorial-aside-info {
-  margin-top: 0.75rem;
-  color: var(--global-text-color-light);
-  line-height: 1.5;
-
-  p {
-    margin: 0.2rem 0;
-  }
-}
-
-.editorial-section {
-  margin-top: 3.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--global-divider-color);
-}
-
-.editorial-section-label {
-  margin: 0 0 1.25rem;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--global-text-color-light);
-}
-
-.editorial-social {
-  .contact-icons {
-    font-size: 1.4rem;
-    a { margin-right: 0.6rem; }
-  }
-}
-
-// Project cards — text-only editorial treatment (no thumbnails).
+// Project cards — text-only treatment (no thumbnails).
 // Counters the al-folio default that expects an image at the top of each card.
 .projects {
   // al-folio's `.projects .grid` has no actual CSS grid; it relies on
@@ -249,12 +108,8 @@ html[data-theme="dark"] {
   }
 }
 
-// CV page — structured editorial CV
+// CV page — structured CV
 .cv-page {
-  .editorial-title--small {
-    font-size: clamp(1.8rem, 4vw, 3rem);
-  }
-
   .cv-pdf-link {
     margin-left: 0.6rem;
     font-size: 0.55em;
@@ -450,6 +305,149 @@ nav#navbar {
         display: none;
       }
     }
+  }
+}
+
+// ----------------------------------------------------------------------------
+// Academic (A3) style — Modern Academic. Replaces editorial-* hero treatment.
+// Photo + name + affiliation as a horizontal hero block; small uppercase
+// section labels for "About", "Selected Publications", etc.
+// ----------------------------------------------------------------------------
+
+.academic-page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 1rem 0 4rem;
+}
+
+.academic-hero {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 1.4rem;
+  align-items: start;
+  margin: 1rem 0 2rem;
+
+  @media (max-width: 575.98px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.academic-hero-photo {
+  picture, figure { margin: 0; width: 120px; max-width: 100%; }
+
+  img {
+    width: 120px !important;
+    max-width: 100%;
+    height: 120px !important;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+  }
+}
+
+.academic-hero-info {
+  .academic-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.35rem;
+    line-height: 1.2;
+  }
+
+  .academic-role {
+    font-size: 0.95rem;
+    color: var(--global-text-color);
+    margin: 0 0 0.2rem;
+    line-height: 1.45;
+  }
+
+  .academic-affil {
+    font-size: 0.9rem;
+    color: var(--global-text-color-light);
+    margin: 0 0 0.15rem;
+    line-height: 1.45;
+
+    a {
+      color: var(--global-theme-color);
+      text-decoration: none;
+      &:hover { color: var(--global-hover-color); text-decoration: underline; }
+    }
+  }
+
+  :lang(ko) & .academic-name {
+    letter-spacing: -0.02em;
+  }
+}
+
+.academic-links {
+  margin-top: 0.7rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+
+  a {
+    color: var(--global-theme-color);
+    text-decoration: none;
+    &:hover { color: var(--global-hover-color); text-decoration: underline; }
+  }
+
+  .sep {
+    color: var(--global-divider-color);
+    margin: 0 0.4rem;
+    user-select: none;
+  }
+}
+
+.academic-section {
+  margin-top: 2rem;
+}
+
+.academic-section-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+  margin: 0 0 0.7rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.academic-prose {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--global-text-color);
+
+  p { margin: 0 0 0.85rem; }
+  p:last-child { margin-bottom: 0; }
+  strong { font-weight: 600; }
+  a { color: var(--global-theme-color); }
+  a:hover { color: var(--global-hover-color); }
+}
+
+.academic-social {
+  margin-top: 2rem;
+
+  .contact-icons {
+    font-size: 1.25rem;
+    a { margin-right: 0.55rem; }
+  }
+}
+
+// Publications and Blog index pages — emitted by the local page.liquid
+// override (Task 5). The post-header is replaced with .academic-section-label.
+.academic-page-header {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+
+  .academic-section-label { margin-bottom: 0.4rem; }
+
+  .academic-page-description {
+    font-size: 0.95rem;
+    color: var(--global-text-color);
+    line-height: 1.6;
+    margin: 0;
   }
 }
 
