@@ -2,20 +2,22 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: ShuRaAtum # the website title (if blank, full name will be used instead)
-first_name: ShuRaAtum
+title: blank # using first/middle/last_name for the full name display
+first_name: Si-Woo
 middle_name: ""
-last_name: ""
+last_name: Eum
 email: shuraatum@gmail.com
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  Best reached by email. I respond fastest to short, specific messages.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Graduate student researching optimized implementations of cryptographic algorithms.
+  Ph.D. candidate at Hansung University CryptoCraft Lab. I optimize cryptographic
+  algorithm implementations for embedded (ARM, RISC-V) and GPU (CUDA, Apple Silicon)
+  platforms, with active research on post-quantum cryptography benchmarking.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
   Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: cryptography, lattice-based cryptography, AVX-512, side-channel, post-quantum # add your own keywords or leave empty
+keywords: post-quantum cryptography, KpqC, NIST PQC, ARM NEON, RISC-V, CUDA GPU, SIMD, embedded cryptography
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🔐 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -30,8 +32,8 @@ github_username: ShuRaAtum
 
 # Social/contact
 github: ShuRaAtum
-# scholar_userid: 'XXXXXXXXX'     # fill later
-# orcid_id: '0000-0000-0000-0000' # fill later
+scholar_userid: 'ygVA5cwAAAAJ'
+orcid_id: '0000-0002-9583-5427'
 
 # -----------------------------------------------------------------------------
 # Theme

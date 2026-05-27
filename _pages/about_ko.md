@@ -4,16 +4,17 @@ title: 소개
 permalink: /ko/
 lang: ko
 
-kicker: 암호 · 구현 · 연구
-tagline: 모든 것을 보호하는 수학을 더 빠르게.
+kicker: 양자내성암호 · 임베디드 · GPU
+tagline: 사람들이 실제로 쓰는 하드웨어 위에서 암호를 더 빠르게.
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false
   more_info: >
-    <p>대학원생</p>
-    <p>암호 연구실</p>
+    <p>박사과정</p>
+    <p><a href="https://sites.google.com/view/cc-hs">CryptoCraft Lab</a></p>
+    <p>한성대학교</p>
 
 selected_papers: true
 social: true
@@ -27,7 +28,17 @@ latest_posts:
   enabled: false
 ---
 
-암호 알고리즘 최적화 구현을 연구하는 대학원생입니다.
-관심사: 격자기반 암호, AVX-512/SIMD 가속, 사이드채널 대응.
+한성대학교 정보컴퓨터공학과 박사과정에 재학 중이며,
+[CryptoCraft 연구실](https://sites.google.com/view/cc-hs)에서
+[서화정 교수님](https://scholar.google.co.kr/citations?user=NJTYsz0AAAAJ)의 지도 아래
+**플랫폼 최적화 암호 구현**을 연구하고 있습니다.
+종이 위에서 설계된 알고리즘을 ARM, RISC-V, GPU 하드웨어에서 최대 성능으로 끌어내는 일에 관심이 있습니다.
 
-준비되시면 이 문단을 본인의 소개로 교체해주세요.
+최근 주제는 **양자내성암호(PQC) 벤치마킹과 엔지니어링**으로,
+[KpqC](https://www.kpqc.or.kr/)와 NIST PQC 후보 알고리즘을 대상으로 하이브리드 TLS 1.3,
+공동 PKI 인프라, 경량 환경(Cortex-M, RV32) 적용을 다루고 있습니다.
+GPU 가속(CUDA, Apple Silicon Metal) 대칭키 암호와
+암호 벤치마킹·테스트 하네스 생성을 위한 AI 에이전트 기반 워크플로우도 함께 진행 중입니다.
+
+논문 실적: **SCI(E) 9편**, **KCI 8편**, **preprint 3편**. ICISC, PlatCon 및 국내
+암호학 학회에 발표한 컨퍼런스 논문 포함. 전체 목록은 [논문 페이지](/ko/publications/)를 참고하세요.
