@@ -7,7 +7,7 @@ layout: default
   {%- assign s = site.data[strings_key] -%}
 {%- endif -%}
 
-<div class="post academic-page academic-about">
+<div class="post academic-page">
 
   <header class="academic-hero">
     {% if page.profile and page.profile.image %}
@@ -56,7 +56,7 @@ layout: default
     </div>
   </header>
 
-  <article class="academic-body">
+  <article>
 
     <section class="academic-section">
       <p class="academic-section-label">{% if s %}{{ s.home.about_heading }}{% else %}about{% endif %}</p>
