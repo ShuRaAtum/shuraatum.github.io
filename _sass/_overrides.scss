@@ -202,10 +202,14 @@ html[data-theme="dark"] {
 nav#navbar {
   opacity: 1;
 
-  // Match the academic-page content width so nav items sit directly above
-  // the content column rather than floating beyond its edges.
+  // Match the academic-page content width AND its outer edges. Bootstrap's
+  // `.container` has 12px gutter padding on each side; zero it out so the
+  // brand and nav items align exactly with the content column on desktop.
+  // Mobile (≤767px) re-adds horizontal padding below.
   > .container {
     max-width: 880px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .navbar-brand {
