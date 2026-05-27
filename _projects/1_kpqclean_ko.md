@@ -2,7 +2,6 @@
 layout: page
 title: KpqClean Ver2
 description: KpqC 2라운드 알고리즘을 공정하게 비교하는 벤치마킹·분석 프레임워크.
-img: assets/img/12.jpg
 importance: 1
 category: implementation
 redirect: /ko/publications/#sim2024kpqclean

@@ -2,7 +2,6 @@
 layout: page
 title: Apple M1 GPU 위의 ARIA-CTR
 description: 한국 표준 블록암호 ARIA를 Apple Silicon GPU에서 커널 수준 메모리 최적화로 가속.
-img: assets/img/10.jpg
 importance: 2
 category: implementation
 redirect: /ko/publications/#eum2025icisc_aria_m1

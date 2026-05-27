@@ -2,7 +2,6 @@
 layout: page
 title: Hawk Signatures on ARMv8
 description: Optimized implementation of the Hawk post-quantum signature scheme on 64-bit ARM (NEON).
-img: assets/img/11.jpg
 importance: 3
 category: implementation
 redirect: /en/publications/#eum2024hawk

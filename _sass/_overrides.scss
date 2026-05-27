@@ -177,6 +177,56 @@ html[data-theme="dark"] {
   }
 }
 
+// Project cards — text-only editorial treatment (no thumbnails).
+// Counters the al-folio default that expects an image at the top of each card.
+.projects {
+  .card {
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+    transition: border-color 150ms ease, transform 150ms ease;
+
+    &:hover {
+      border-color: var(--global-theme-color);
+      transform: translateY(-2px);
+    }
+
+    .card-body {
+      padding: 1.25rem 1.35rem;
+    }
+
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.5rem;
+      color: var(--global-text-color);
+    }
+
+    .card-text {
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: var(--global-text-color-light);
+      margin-bottom: 0;
+    }
+  }
+
+  // Category labels become editorial section markers
+  .category {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light);
+    margin: 2rem 0 1rem;
+  }
+
+  // Hide empty category groups (e.g. tool, course when no projects in them)
+  .category + .grid:empty,
+  .category + .grid:not(:has(.col)) {
+    display: none;
+  }
+}
+
 // CV page — structured editorial CV
 .cv-page {
   .editorial-title--small {

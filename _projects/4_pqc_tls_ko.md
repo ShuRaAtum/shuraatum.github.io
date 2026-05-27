@@ -2,7 +2,6 @@
 layout: page
 title: 하이브리드 PQC TLS 1.3 스레드 풀
 description: 워커 스레드 풀을 활용한 하이브리드 양자내성 TLS 1.3 핸드셰이크 병렬 실행 모델.
-img: assets/img/1.jpg
 importance: 4
 category: implementation
 redirect: /ko/publications/#eum2026threadpool

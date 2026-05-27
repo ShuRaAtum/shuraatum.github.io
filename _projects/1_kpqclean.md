@@ -2,7 +2,6 @@
 layout: page
 title: KpqClean Ver2
 description: Comprehensive benchmarking and analysis framework for KpqC Round 2 algorithms.
-img: assets/img/12.jpg
 importance: 1
 category: implementation
 redirect: /en/publications/#sim2024kpqclean

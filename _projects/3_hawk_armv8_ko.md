@@ -2,7 +2,6 @@
 layout: page
 title: ARMv8 위의 Hawk 서명
 description: 양자내성 서명 기법 Hawk를 64비트 ARM (NEON) 위에서 최적화 구현.
-img: assets/img/11.jpg
 importance: 3
 category: implementation
 redirect: /ko/publications/#eum2024hawk
