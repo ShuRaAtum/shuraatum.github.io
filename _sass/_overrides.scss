@@ -345,6 +345,8 @@ html[data-theme="dark"] {
 
 // Editorial navbar polish: balanced vertical rhythm and consistent item sizing.
 nav#navbar {
+  opacity: 1;
+
   // al-folio binds .container to site.max_width (930px). The navbar feels
   // cramped on wide screens; give it more room while content stays narrow.
   > .container {
@@ -395,5 +397,66 @@ nav#navbar {
 
   @media (min-width: 576px) {
     #light-toggle { transform: none; }
+  }
+
+  // The full multilingual menu does not fit at Bootstrap's `sm` navbar
+  // breakpoint. Keep the collapsed menu until `md` so the navbar stays one row.
+  &.navbar-expand-md {
+    @media (max-width: 767.98px) {
+      > .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .navbar-toggler-main {
+        display: block;
+        margin-left: auto;
+      }
+
+      .navbar-collapse-main {
+        flex-basis: 100%;
+        width: 100%;
+        text-align: left;
+      }
+
+      .navbar-menu-list {
+        align-items: flex-start;
+        margin-left: 0;
+        padding-top: 0.5rem;
+        width: 100%;
+      }
+
+      .navbar-nav .nav-item .nav-link {
+        padding: 0.55rem 0;
+      }
+
+      .toggle-container {
+        margin-left: 0;
+        padding: 0.35rem 0 0.5rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .navbar-collapse-main {
+        flex-basis: auto;
+        width: auto;
+      }
+
+      .navbar-menu-list {
+        flex-direction: row;
+      }
+
+      .navbar-toggler-main {
+        display: none;
+      }
+    }
+  }
+}
+
+@layer components {
+  @media (min-width: 768px) {
+    nav#navbar.navbar-expand-md .navbar-collapse-main {
+      display: flex !important;
+    }
   }
 }
