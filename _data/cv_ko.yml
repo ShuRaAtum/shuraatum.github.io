@@ -1,5 +1,5 @@
 cv:
-  name: 음시우 (Si-Woo Eum)
+  name: 엄시우 (Si-Woo Eum)
   label: 박사과정 · CryptoCraft Lab · 한성대학교
   email: shuraatum@gmail.com
   location: 서울, 대한민국
@@ -48,9 +48,9 @@ cv:
         keywords: "플랫폼 최적화 구현, 양자내성암호(KpqC, NIST PQC), ARM(Cortex-M, ARMv8/NEON) 및 RISC-V 임베디드 암호, GPU/CUDA 가속 암호, SIMD 병렬화 대칭키 암호, AI 에이전트 기반 암호 엔지니어링"
 
     수상:
-      - title: 전국 암호 공모전 — 우수상
+      - title: 국가 암호 공모 — 우수상
         date: 2025
-      - title: 전국 암호 공모전 — 우수상
+      - title: 국가 암호 공모 — 우수상
         date: 2024
       - title: 부채널 정보 분석 경진대회 — 위원장상
         date: 2024
@@ -60,7 +60,7 @@ cv:
         date: 2023
       - title: 부채널 분석 경진대회 — KISA 원장상
         date: 2022
-      - title: 전국 암호 공모전 — 특별상
+      - title: 국가 암호 공모 — 특별상
         date: 2022
       - title: PlatCon '22 — Best Paper Award
         date: 2022
@@ -111,7 +111,6 @@ cv:
       - name: 블록체인 핵심 기술 및 미래 혁신 인재 양성 (IITP)
         start_date: 2026-01
         end_date: 2027-12
-        summary: 참여 연구원
       - name: 동형암호 활용 사례 분석 및 가이드라인 개발 (한국암호포럼)
         start_date: 2026-05
         end_date: 2026-11
@@ -151,9 +150,3 @@ cv:
       - name: ARM Cortex-M4 및 RISC-V 위 NIST PQC 벤치마크 (NRF)
         start_date: 2020-06
         end_date: 2023-02
-
-    언어:
-      - name: 한국어
-        summary: 모국어
-      - name: 영어
-        summary: 업무 능숙

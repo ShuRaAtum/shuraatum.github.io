@@ -11,7 +11,7 @@ layout: default
 
     <h1 class="editorial-title">
       {% if site.title == 'blank' %}
-        {{ site.first_name }}{{ site.middle_name }}{{ site.last_name }}<span class="editorial-dot">.</span>
+        {{ site.first_name }}{% if site.middle_name and site.middle_name != "" %} {{ site.middle_name }}{% endif %} {{ site.last_name }}<span class="editorial-dot">.</span>
       {% else %}
         {{ site.title }}<span class="editorial-dot">.</span>
       {% endif %}

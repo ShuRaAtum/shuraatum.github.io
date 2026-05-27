@@ -50,9 +50,9 @@ cv:
         keywords: "Platform-optimized implementation, Post-quantum cryptography (KpqC, NIST PQC), Embedded crypto on ARM (Cortex-M, ARMv8/NEON) and RISC-V, GPU/CUDA-accelerated crypto, Symmetric-key crypto with SIMD parallelization, AI-agent-assisted cryptographic engineering"
 
     Awards:
-      - title: National Cryptography Contest — Excellence Award
+      - title: National Cryptography Competition — Excellence Award
         date: 2025
-      - title: National Cryptography Contest — Excellence Award
+      - title: National Cryptography Competition — Excellence Award
         date: 2024
       - title: Side-Channel Information Analysis Competition — Chair's Award
         date: 2024
@@ -62,7 +62,7 @@ cv:
         date: 2023
       - title: Side-Channel Analysis Competition — KISA President's Award
         date: 2022
-      - title: National Cryptography Contest — Special Award
+      - title: National Cryptography Competition — Special Award
         date: 2022
       - title: PlatCon '22 — Best Paper Award
         date: 2022
@@ -113,7 +113,6 @@ cv:
       - name: Blockchain Core Technologies & Future Innovative Talent Training (IITP)
         start_date: 2026-01
         end_date: 2027-12
-        summary: Participating Researcher
       - name: Homomorphic Encryption Application Guidelines (Korea Cryptography Forum)
         start_date: 2026-05
         end_date: 2026-11
@@ -153,9 +152,3 @@ cv:
       - name: NIST Post-Quantum Cryptography Benchmarks on ARM Cortex-M4 and RISC-V (NRF)
         start_date: 2020-06
         end_date: 2023-02
-
-    Languages:
-      - name: Korean
-        summary: Native
-      - name: English
-        summary: Professional working proficiency
