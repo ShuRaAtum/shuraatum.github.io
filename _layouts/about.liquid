@@ -1,80 +1,81 @@
 ---
 layout: default
 ---
-<div class="post editorial-about">
-  <header class="post-header editorial-hero">
-    {% if page.kicker %}
-      <p class="editorial-kicker">{{ page.kicker }}</p>
-    {% else %}
-      <p class="editorial-kicker">{{ site.keywords | replace: ',', ' ·' }}</p>
+{%- assign s = nil -%}
+{%- if page.lang -%}
+  {%- assign strings_key = "strings_" | append: page.lang -%}
+  {%- assign s = site.data[strings_key] -%}
+{%- endif -%}
+
+<div class="post academic-page academic-about">
+
+  <header class="academic-hero">
+    {% if page.profile and page.profile.image %}
+      {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+      <div class="academic-hero-photo">
+        {%
+          include figure.liquid
+          loading="eager"
+          path=profile_image_path
+          class="img-fluid"
+          alt=page.profile.image
+          cache_bust=true
+        %}
+      </div>
     {% endif %}
 
-    <h1 class="editorial-title">
-      {% if site.title == 'blank' %}
-        {{ site.first_name }}{% if site.middle_name and site.middle_name != "" %} {{ site.middle_name }}{% endif %} {{ site.last_name }}<span class="editorial-dot">.</span>
-      {% else %}
-        {{ site.title }}<span class="editorial-dot">.</span>
+    <div class="academic-hero-info">
+      <h1 class="academic-name">
+        {% if site.title == 'blank' %}
+          {{ site.first_name }}{% if site.middle_name and site.middle_name != "" %} {{ site.middle_name }}{% endif %} {{ site.last_name }}
+        {% else %}
+          {{ site.title }}
+        {% endif %}
+      </h1>
+
+      {% if page.role %}<p class="academic-role">{{ page.role }}</p>{% endif %}
+
+      {% if page.lab or page.university %}
+        <p class="academic-affil">
+          {% if page.lab %}{% if page.lab.url %}<a href="{{ page.lab.url }}">{{ page.lab.name }}</a>{% else %}{{ page.lab.name }}{% endif %}{% endif %}{% if page.lab and page.university %}, {% endif %}{% if page.university %}{{ page.university }}{% endif %}
+        </p>
       {% endif %}
-    </h1>
 
-    {% if page.tagline %}
-      <p class="editorial-tagline">{{ page.tagline }}</p>
-    {% endif %}
+      {% if page.advisor %}
+        <p class="academic-affil">
+          Advised by
+          {% if page.advisor.url %}<a href="{{ page.advisor.url }}">{{ page.advisor.name }}</a>{% else %}{{ page.advisor.name }}{% endif %}
+        </p>
+      {% endif %}
 
-    <hr class="editorial-rule">
-  </header>
-
-  <article class="editorial-body">
-    <div class="editorial-grid">
-      <div class="editorial-prose">{{ content }}</div>
-
-      {% if page.profile %}
-        <aside class="editorial-aside">
-          {% if page.profile.image %}
-            {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
-            {% if page.profile.image_circular %}
-              {% assign profile_image_class = 'img-fluid editorial-portrait rounded-circle' %}
-            {% else %}
-              {% assign profile_image_class = 'img-fluid editorial-portrait' %}
-            {% endif %}
-            {% capture sizes %}(min-width: {{ site.max_width }}) 220px, 40vw"{% endcapture %}
-            {%
-              include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
-              cache_bust=true
-            %}
-          {% endif %}
-          {% if page.profile.more_info %}
-            <div class="editorial-aside-info">{{ page.profile.more_info }}</div>
-          {% endif %}
-        </aside>
+      {% if page.links %}
+        <p class="academic-links">
+          {% for link in page.links %}{% unless forloop.first %}<span class="sep">·</span>{% endunless %}<a href="{{ link.url }}"{% if link.url contains '://' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.label }}</a>{% endfor %}
+        </p>
       {% endif %}
     </div>
+  </header>
 
-    {%- assign s = nil -%}
-    {%- if page.lang -%}
-      {%- assign strings_key = "strings_" | append: page.lang -%}
-      {%- assign s = site.data[strings_key] -%}
-    {%- endif -%}
+  <article class="academic-body">
 
-    {% if page.announcements and page.announcements.enabled %}
-      <section class="editorial-section">
-        <p class="editorial-section-label">{% if s %}{{ s.home.news_heading }}{% else %}news{% endif %}</p>
-        {% include news.liquid limit=true %}
-      </section>
-    {% endif %}
+    <section class="academic-section">
+      <p class="academic-section-label">{% if s %}{{ s.home.about_heading }}{% else %}about{% endif %}</p>
+      <div class="academic-prose">{{ content }}</div>
+    </section>
 
     {% if page.selected_papers %}
-      <section class="editorial-section">
-        <p class="editorial-section-label">{% if s %}{{ s.home.selected_publications_heading }}{% else %}selected publications{% endif %}</p>
+      <section class="academic-section">
+        <p class="academic-section-label">{% if s %}{{ s.home.selected_publications_heading }}{% else %}selected publications{% endif %}</p>
         {% include selected_papers.liquid %}
       </section>
     {% endif %}
 
     {% if page.social %}
-      <section class="editorial-section editorial-social">
+      <section class="academic-section academic-social">
         <div class="contact-icons">{% social_links %}</div>
         {% if site.contact_note %}<div class="contact-note">{{ site.contact_note }}</div>{% endif %}
       </section>
     {% endif %}
+
   </article>
 </div>
