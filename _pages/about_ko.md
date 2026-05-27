@@ -4,27 +4,32 @@ title: 소개
 permalink: /ko/
 lang: ko
 
-kicker: 양자내성암호 · 임베디드 · GPU
-tagline: 사람들이 실제로 쓰는 하드웨어 위에서 암호를 더 빠르게.
+role: "박사과정 · 정보컴퓨터공학과"
+lab:
+  name: CryptoCraft 연구실
+  url: https://sites.google.com/view/cc-hs
+university: 한성대학교
+advisor:
+  name: 서화정 교수님
+  url: https://scholar.google.co.kr/citations?user=NJTYsz0AAAAJ
+
+links:
+  - label: 이메일
+    url: mailto:shuraatum@gmail.com
+  - label: 이력서
+    url: /ko/cv/
+  - label: Scholar
+    url: https://scholar.google.com/citations?user=ygVA5cwAAAAJ
+  - label: GitHub
+    url: https://github.com/ShuRaAtum
 
 profile:
-  align: right
   image: prof_pic.jpg
-  image_circular: false
-  more_info: >
-    <p>박사과정</p>
-    <p><a href="https://sites.google.com/view/cc-hs">CryptoCraft Lab</a></p>
-    <p>한성대학교</p>
 
 selected_papers: true
 social: true
 
 announcements:
-  enabled: true
-  scrollable: true
-  limit: 5
-
-latest_posts:
   enabled: false
 ---
 
