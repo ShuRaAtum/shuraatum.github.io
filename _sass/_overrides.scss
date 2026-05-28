@@ -207,7 +207,10 @@ nav#navbar {
   // brand and nav items align exactly with the content column on desktop.
   // Mobile (≤767px) re-adds horizontal padding below.
   > .container {
+    width: 100%;
     max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 0;
     padding-right: 0;
   }
