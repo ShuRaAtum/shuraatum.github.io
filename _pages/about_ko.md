@@ -37,7 +37,7 @@ announcements:
 [CryptoCraft 연구실](https://sites.google.com/view/cc-hs)에서
 [서화정 교수님](https://scholar.google.co.kr/citations?user=NJTYsz0AAAAJ)의 지도 아래
 **플랫폼 최적화 암호 구현**을 연구하고 있습니다.
-종이 위에서 설계된 알고리즘을 ARM, RISC-V, GPU 하드웨어에서 최대 성능으로 끌어내는 일에 관심이 있습니다.
+종이 위에서 설계된 암호 알고리즘을 ARM, RISC-V, GPU 하드웨어에서 최대 성능으로 끌어내는 일에 관심이 있습니다.
 
 최근 주제는 **양자내성암호(PQC) 벤치마킹과 엔지니어링**으로,
 [KpqC](https://www.kpqc.or.kr/)와 NIST PQC 후보 알고리즘을 대상으로 하이브리드 TLS 1.3,

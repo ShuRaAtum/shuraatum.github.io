@@ -111,11 +111,18 @@ html[data-theme="dark"] {
 // CV page — structured CV
 .cv-page {
   .cv-pdf-link {
-    margin-left: 0.6rem;
-    font-size: 0.55em;
+    display: inline-flex;
+    margin-left: 0.75rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: none;
     color: var(--global-theme-color);
     vertical-align: middle;
-    &:hover { color: var(--global-hover-color); }
+    &:hover {
+      color: var(--global-hover-color);
+      text-decoration: underline;
+    }
   }
 
   .cv-summary {

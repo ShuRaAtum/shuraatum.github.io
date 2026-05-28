@@ -9,7 +9,7 @@ home:
   news_heading: 소식
   selected_publications_heading: 주요 논문
 cv:
-  download_pdf: PDF 다운로드
+  download_pdf: 다운로드
 lang:
   switch_to_other: English
   current: KO

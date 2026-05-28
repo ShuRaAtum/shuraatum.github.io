@@ -9,7 +9,7 @@ home:
   news_heading: news
   selected_publications_heading: selected publications
 cv:
-  download_pdf: Download PDF
+  download_pdf: Download
 lang:
   switch_to_other: 한국어
   current: EN

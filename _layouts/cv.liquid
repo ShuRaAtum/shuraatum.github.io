@@ -2,6 +2,8 @@
 layout: default
 ---
 {%- assign lang = page.lang | default: "en" -%}
+{%- assign strings_key = "strings_" | append: lang -%}
+{%- assign s = site.data[strings_key] -%}
 {%- if lang == "ko" -%}
   {%- assign cv_data = site.data.cv_ko.cv -%}
 {%- else -%}
@@ -14,8 +16,8 @@ layout: default
     <p class="academic-section-label">
       {{ page.title }}
       {% if page.cv_pdf %}
-        <a class="cv-pdf-link" href="{{ page.cv_pdf | relative_url }}" target="_blank" rel="noopener noreferrer" title="Download PDF">
-          <i class="fa-solid fa-file-pdf"></i>
+        <a class="cv-pdf-link" href="{{ page.cv_pdf | relative_url }}" target="_blank" rel="noopener noreferrer" title="{{ s.cv.download_pdf | default: 'Download PDF' }}">
+          {{ s.cv.download_pdf | default: 'Download' }}
         </a>
       {% endif %}
     </p>
