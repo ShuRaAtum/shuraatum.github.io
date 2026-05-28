@@ -201,6 +201,14 @@ html[data-theme="dark"] {
 // Academic navbar: aligned to content (880px), sentence-case items, lighter weight.
 nav#navbar {
   opacity: 1;
+  width: 100%;
+
+  &.fixed-top {
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
 
   // Match the academic-page content width AND its outer edges. Bootstrap's
   // `.container` has 12px gutter padding on each side; zero it out so the
