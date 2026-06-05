@@ -24,7 +24,7 @@ links:
     url: https://github.com/ShuRaAtum
 
 profile:
-  image: prof_pic.jpg
+  image:
 
 selected_papers: true
 social: true
