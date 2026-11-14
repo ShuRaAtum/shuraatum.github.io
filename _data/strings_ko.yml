@@ -10,7 +10,6 @@ home:
   selected_publications_heading: 주요 논문
   advised_by: 지도교수
   contact_note: 이메일로 연락 주시면 가장 빠르게 답변드립니다.
-  scholar_stats: "Google Scholar 인용 %c회, h-index %h"
 cv:
   download_pdf: PDF 다운로드
 publications:
@@ -27,8 +26,8 @@ research_map:
   hint: 점에 마우스를 올리면 논문 제목이 보이고, 누르면 논문 목록의 해당 항목으로 이동합니다.
   rows:
     arm: ARM
-    embedded: MCU·RISC-V
+    embedded: MCU, RISC-V
     x86: x86 SIMD
     gpu: GPU
-    protocol: PQC·프로토콜
+    protocol: PQC, 프로토콜
     quantum: 양자 회로

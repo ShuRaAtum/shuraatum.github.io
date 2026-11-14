@@ -32,7 +32,7 @@
                 <a
                   class="rm-dot{% if p.first %} is-first{% endif %}"
                   href="{{ pubs_url }}#{{ p.key }}"
-                  data-caption="{{ p.title | escape }} — {{ p.abbr | escape }} {{ p.year }}"
+                  data-caption="{{ p.title | escape }} ({{ p.abbr | escape }} {{ p.year }})"
                   aria-label="{{ p.title | escape }} ({{ p.abbr | escape }}, {{ p.year }}){% if p.first %}, {{ t.first }}{% endif %}"
                 ></a>
               {%- endfor -%}

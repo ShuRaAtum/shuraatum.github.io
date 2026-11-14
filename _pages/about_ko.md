@@ -44,8 +44,8 @@ announcements:
 [KpqC](https://www.kpqc.or.kr/)와 NIST PQC 후보 알고리즘을 대상으로 하이브리드 TLS 1.3,
 공동 PKI 인프라, 경량 환경(Cortex-M, RV32) 적용을 다루고 있습니다.
 GPU 가속(CUDA, Apple Silicon Metal) 대칭키 암호와
-암호 벤치마킹·테스트 하네스 생성을 위한 AI 에이전트 기반 워크플로우도 함께 진행 중입니다.
+암호 벤치마킹과 테스트 하네스 생성을 위한 AI 에이전트 기반 워크플로우도 함께 진행 중입니다.
 
-{%- assign pc = site.data.research_map.counts -%}
+{% assign pc = site.data.research_map.counts -%}
 논문 실적: **SCI(E) {{ pc.scie }}편**{% if pc.journal > 0 %}, **IACR TCHES {{ pc.journal }}편**{% endif %}, **KCI {{ pc.kci }}편**,
 **국제학회 {{ pc.conference }}편**, **preprint {{ pc.preprint }}편**. 전체 목록은 [논문 페이지](/ko/publications/)를 참고하세요.

@@ -1,6 +1,6 @@
 cv:
   name: オム・シウ（Si-Woo Eum）
-  label: 博士課程 · CryptoCraft Lab · Hansung University
+  label: 博士課程、CryptoCraft Lab、Hansung University
   email: shuraatum@gmail.com
   location: 韓国・ソウル
   image: ""
@@ -26,8 +26,8 @@ cv:
         start_date: 2023-03
         end_date: 在学中
         highlights:
-          - 指導教員 — ソ・ファジョン（Hwa-Jeong Seo）教授、CryptoCraft Lab
-          - 研究テーマ — プラットフォーム最適化暗号実装
+          - 指導教員：ソ・ファジョン（Hwa-Jeong Seo）教授、CryptoCraft Lab
+          - 研究テーマ：プラットフォーム最適化暗号実装
 
       - institution: Hansung University
         location: 韓国・ソウル
@@ -48,43 +48,43 @@ cv:
         keywords: "プラットフォーム最適化実装、耐量子計算機暗号（KpqC、NIST PQC）、ARM（Cortex-M、ARMv8/NEON）およびRISC-V向け組込み暗号、GPU/CUDAによる暗号高速化、SIMD並列化による共通鍵暗号、AIエージェントを活用した暗号エンジニアリング"
 
     受賞:
-      - title: 国家暗号コンテスト — 優秀賞
+      - title: 国家暗号コンテスト 優秀賞
         date: 2026
-      - title: WISA 2026 — 最優秀論文賞
+      - title: WISA 2026 最優秀論文賞
         date: 2026
-      - title: 国家暗号コンテスト — 優秀賞
+      - title: 国家暗号コンテスト 優秀賞
         date: 2025
-      - title: 国家暗号コンテスト — 優秀賞
+      - title: 国家暗号コンテスト 優秀賞
         date: 2024
-      - title: サイドチャネル情報分析コンテスト — 委員長賞
+      - title: サイドチャネル情報分析コンテスト 委員長賞
         date: 2024
-      - title: サイドチャネル情報分析コンテスト — 入賞
+      - title: サイドチャネル情報分析コンテスト 入賞
         date: 2023
-      - title: Hansung University 大学院 — 優秀修士論文賞
+      - title: Hansung University 大学院 優秀修士論文賞
         date: 2023
-      - title: サイドチャネル分析コンテスト — KISA院長賞
+      - title: サイドチャネル分析コンテスト KISA院長賞
         date: 2022
-      - title: 国家暗号コンテスト — 特別賞
+      - title: 国家暗号コンテスト 特別賞
         date: 2022
-      - title: PlatCon '22 — 最優秀論文賞
+      - title: PlatCon '22 最優秀論文賞
         date: 2022
-      - title: 第1回「デジタルトランスフォーメーション融合アイデア」コンテスト — 大賞
+      - title: 第1回「デジタルトランスフォーメーション融合アイデア」コンテスト 大賞
         date: 2022
-      - title: 量子情報コンテスト — 特別賞
+      - title: 量子情報コンテスト 特別賞
         date: 2022
-      - title: CISC-S — 優秀論文賞
+      - title: CISC-S 優秀論文賞
         date: 2022
-      - title: AI+セキュリティ・アイデアコンテスト — 大賞
+      - title: AI+セキュリティ・アイデアコンテスト 大賞
         date: 2021
-      - title: ACK — 優秀論文賞
+      - title: ACK 優秀論文賞
         date: 2021
-      - title: CISC-S — 優秀論文賞
+      - title: CISC-S 優秀論文賞
         date: 2021
-      - title: ASK — 優秀論文賞
+      - title: ASK 優秀論文賞
         date: 2021
-      - title: CISC 湖南支部学術大会 — 優秀論文賞
+      - title: CISC 湖南支部学術大会 優秀論文賞
         date: 2020
-      - title: 第3回サイドチャネル分析コンテスト — 委員長賞
+      - title: 第3回サイドチャネル分析コンテスト 委員長賞
         date: 2020
 
     スキル:
@@ -109,7 +109,7 @@ cv:
       - name: プレプリント
         summary: "14編（Cryptology ePrint Archive）"
       - name: 国際会議
-        summary: "13編（ICISC、WISA、PlatCon。WISA 2026・PlatCon 2022 最優秀論文賞）"
+        summary: "13編（ICISC、WISA、PlatCon。WISA 2026とPlatCon 2022で最優秀論文賞）"
       - name: 韓国国内学会
         summary: "14件以上の発表（CISC-S、CISC-W、ASK、ACK、地域支部大会）"
 

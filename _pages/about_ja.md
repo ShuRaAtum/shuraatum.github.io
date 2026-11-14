@@ -46,6 +46,6 @@ announcements:
 あわせて、GPU（CUDA、Apple Silicon Metal）による共通鍵暗号の高速化や、
 暗号ベンチマーク・テストハーネス生成のための AI エージェント活用ワークフローにも取り組んでいます。
 
-{%- assign pc = site.data.research_map.counts -%}
+{% assign pc = site.data.research_map.counts -%}
 論文実績：**SCI(E) 論文誌 {{ pc.scie }}編**{% if pc.journal > 0 %}、**IACR TCHES {{ pc.journal }}編**{% endif %}、**KCI 論文誌 {{ pc.kci }}編**、
 **国際会議 {{ pc.conference }}編**、**プレプリント {{ pc.preprint }}編**。全リストは[論文ページ](/ja/publications/)をご覧ください。

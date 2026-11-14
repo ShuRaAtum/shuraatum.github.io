@@ -11,7 +11,6 @@ home:
   advised_by: 指導教員
   affil_separator: "、"
   contact_note: ご連絡はメールでお願いします。最も早く返信できます。
-  scholar_stats: "Google Scholar 被引用数 %c件、h指数 %h"
 cv:
   download_pdf: PDFをダウンロード（英語版）
 publications:

@@ -1,6 +1,6 @@
 cv:
   name: Si-Woo Eum
-  label: Ph.D. Candidate · CryptoCraft Lab · Hansung University
+  label: Ph.D. candidate, CryptoCraft Lab, Hansung University
   email: shuraatum@gmail.com
   location: Seoul, South Korea
   image: ""
@@ -28,8 +28,8 @@ cv:
         start_date: 2023-03
         end_date: Present
         highlights:
-          - Advisor — Prof. Hwa-Jeong Seo, CryptoCraft Lab
-          - Research focus — platform-optimized cryptographic implementation
+          - Advisor: Prof. Hwa-Jeong Seo, CryptoCraft Lab
+          - Research focus: platform-optimized cryptographic implementation
 
       - institution: Hansung University
         location: Seoul, South Korea
@@ -50,43 +50,43 @@ cv:
         keywords: "Platform-optimized implementation, Post-quantum cryptography (KpqC, NIST PQC), Embedded crypto on ARM (Cortex-M, ARMv8/NEON) and RISC-V, GPU/CUDA-accelerated crypto, Symmetric-key crypto with SIMD parallelization, AI-agent-assisted cryptographic engineering"
 
     Awards:
-      - title: National Cryptography Competition — Excellence Award
+      - title: National Cryptography Competition, Excellence Award
         date: 2026
-      - title: WISA 2026 — Best Paper Award
+      - title: WISA 2026, Best Paper Award
         date: 2026
-      - title: National Cryptography Competition — Excellence Award
+      - title: National Cryptography Competition, Excellence Award
         date: 2025
-      - title: National Cryptography Competition — Excellence Award
+      - title: National Cryptography Competition, Excellence Award
         date: 2024
-      - title: Side-Channel Information Analysis Competition — Chair's Award
+      - title: Side-Channel Information Analysis Competition, Chair's Award
         date: 2024
-      - title: Side-Channel Information Analysis Competition — Award
+      - title: Side-Channel Information Analysis Competition, Award
         date: 2023
-      - title: Hansung University Graduate School — Best Master's Thesis Award
+      - title: Hansung University Graduate School, Best Master's Thesis Award
         date: 2023
-      - title: Side-Channel Analysis Competition — KISA President's Award
+      - title: Side-Channel Analysis Competition, KISA President's Award
         date: 2022
-      - title: National Cryptography Competition — Special Award
+      - title: National Cryptography Competition, Special Award
         date: 2022
-      - title: PlatCon '22 — Best Paper Award
+      - title: PlatCon '22, Best Paper Award
         date: 2022
-      - title: 1st "Digital Transformation Convergence Ideas" Contest — Grand Prize
+      - title: 1st "Digital Transformation Convergence Ideas" Contest, Grand Prize
         date: 2022
-      - title: Quantum Information Competition — Special Award
+      - title: Quantum Information Competition, Special Award
         date: 2022
-      - title: CISC-S — Best Paper Award
+      - title: CISC-S, Best Paper Award
         date: 2022
-      - title: AI+Security Idea Contest — Grand Prize
+      - title: AI+Security Idea Contest, Grand Prize
         date: 2021
-      - title: ACK — Best Paper Award
+      - title: ACK, Best Paper Award
         date: 2021
-      - title: CISC-S — Best Paper Award
+      - title: CISC-S, Best Paper Award
         date: 2021
-      - title: ASK — Best Paper Award
+      - title: ASK, Best Paper Award
         date: 2021
-      - title: CISC Honam Chapter Conference — Best Paper Award
+      - title: CISC Honam Chapter Conference, Best Paper Award
         date: 2020
-      - title: 3rd Side-Channel Analysis Competition — Chair's Award
+      - title: 3rd Side-Channel Analysis Competition, Chair's Award
         date: 2020
 
     Skills:
@@ -111,7 +111,7 @@ cv:
       - name: Preprints
         summary: "14 papers (Cryptology ePrint Archive)"
       - name: International Conferences
-        summary: "13 papers (ICISC, WISA, PlatCon; WISA 2026 and PlatCon 2022 Best Paper)"
+        summary: "13 papers (ICISC, WISA, PlatCon), including Best Paper Awards at WISA 2026 and PlatCon 2022"
       - name: Domestic Conferences (Korea)
         summary: "14+ presentations (CISC-S, CISC-W, ASK, ACK, regional chapters)"
 
@@ -146,7 +146,7 @@ cv:
       - name: Post-Quantum Cryptography Practical Implementation (NSR)
         start_date: 2024-04
         end_date: 2024-09
-      - name: KpqC Competition Algorithms — Performance Comparison (NSR)
+      - name: Performance Comparison of KpqC Competition Algorithms (NSR)
         start_date: 2023-04
         end_date: 2023-10
       - name: NIST-PQC Key Exchange Techniques and Comparison (Korea Cryptography Society)

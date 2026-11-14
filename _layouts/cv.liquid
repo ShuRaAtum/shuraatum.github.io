@@ -44,7 +44,7 @@ layout: default
               <div class="cv-entry-row">
                 <div class="cv-entry-when">
                   {% if entry.start_date or entry.end_date %}
-                    <span>{{ entry.start_date }}{% if entry.end_date %} — {{ entry.end_date }}{% endif %}</span>
+                    <span>{{ entry.start_date }}{% if entry.end_date %} – {{ entry.end_date }}{% endif %}</span>
                   {% elsif entry.date %}
                     <span>{{ entry.date }}</span>
                   {% endif %}
@@ -52,10 +52,10 @@ layout: default
                 <div class="cv-entry-body">
                   {%- if entry.institution -%}
                     <strong>{{ entry.studyType }}, {{ entry.area }}</strong><br>
-                    <span class="cv-entry-where">{{ entry.institution }}{% if entry.location %} · {{ entry.location }}{% endif %}</span>
+                    <span class="cv-entry-where">{{ entry.institution }}{% if entry.location %}, {{ entry.location }}{% endif %}</span>
                   {%- elsif entry.company -%}
                     <strong>{{ entry.position }}</strong><br>
-                    <span class="cv-entry-where">{{ entry.company }}{% if entry.location %} · {{ entry.location }}{% endif %}</span>
+                    <span class="cv-entry-where">{{ entry.company }}{% if entry.location %}, {{ entry.location }}{% endif %}</span>
                   {%- elsif entry.title -%}
                     {{ entry.title }}
                   {%- elsif entry.name -%}

@@ -60,14 +60,6 @@ layout: default
         </p>
       {% endif %}
 
-      {%- assign scholar_meta = site.data.citations.metadata -%}
-      {% if scholar_meta.total_citations and s.home.scholar_stats %}
-        <p class="academic-stats">
-          <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener noreferrer">
-            {{- s.home.scholar_stats | replace: '%c', scholar_meta.total_citations | replace: '%h', scholar_meta.h_index -}}
-          </a>
-        </p>
-      {% endif %}
     </div>
   </header>
 
