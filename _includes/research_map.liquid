@@ -1,0 +1,73 @@
+{%- comment -%}
+  Platform x year map of every paper in papers.bib.
+  Data comes from _plugins/research_map.rb (site.data.research_map).
+  Expects `s` (the language strings) and `lang` from the calling layout.
+{%- endcomment -%}
+{%- assign map = site.data.research_map -%}
+{%- if map -%}
+  {%- assign t = s.research_map -%}
+  {%- assign pubs_url = '/' | append: lang | append: '/publications/' | relative_url -%}
+  {%- assign year_count = map.years | size -%}
+  {%- assign first_year = map.years | first -%}
+  {%- assign last_year = map.years | last -%}
+  <section class="research-map" aria-labelledby="research-map-heading">
+    <h2 id="research-map-heading" class="research-map-heading">{{ t.heading }}</h2>
+    <p class="research-map-summary">
+      {{ t.summary | replace: '%n', map.total | replace: '%from', first_year | replace: '%to', last_year }}
+    </p>
+
+    <div class="research-map-grid" style="--years: {{ year_count }}" role="table" aria-label="{{ t.heading }}">
+      <div class="rm-row rm-head" role="row">
+        <span class="rm-label" role="columnheader"></span>
+        {%- for y in map.years -%}
+          <span class="rm-year" role="columnheader">{{ y }}</span>
+        {%- endfor -%}
+      </div>
+      {%- for row in map.rows -%}
+        <div class="rm-row" role="row">
+          <span class="rm-label" role="rowheader">{{ t.rows[row.key] }}</span>
+          {%- for cell in row.cells -%}
+            <span class="rm-cell" role="cell">
+              {%- for p in cell -%}
+                <a
+                  class="rm-dot{% if p.first %} is-first{% endif %}"
+                  href="{{ pubs_url }}#{{ p.key }}"
+                  data-caption="{{ p.title | escape }} — {{ p.abbr | escape }} {{ p.year }}"
+                  aria-label="{{ p.title | escape }} ({{ p.abbr | escape }}, {{ p.year }}){% if p.first %}, {{ t.first }}{% endif %}"
+                ></a>
+              {%- endfor -%}
+            </span>
+          {%- endfor -%}
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <div class="research-map-foot">
+      <p class="research-map-caption" aria-live="polite" data-default="{{ t.hint | escape }}">{{ t.hint }}</p>
+      <p class="research-map-legend">
+        <span><i class="rm-dot is-first" aria-hidden="true"></i>{{ t.first }}</span>
+        <span><i class="rm-dot" aria-hidden="true"></i>{{ t.co }}</span>
+      </p>
+    </div>
+  </section>
+  <script>
+    (function () {
+      var map = document.currentScript.previousElementSibling;
+      var caption = map.querySelector('.research-map-caption');
+      var reset = function () {
+        caption.textContent = caption.getAttribute('data-default');
+        caption.classList.remove('is-active');
+      };
+      map.querySelectorAll('a.rm-dot').forEach(function (dot) {
+        var show = function () {
+          caption.textContent = dot.getAttribute('data-caption');
+          caption.classList.add('is-active');
+        };
+        dot.addEventListener('mouseenter', show);
+        dot.addEventListener('focus', show);
+        dot.addEventListener('mouseleave', reset);
+        dot.addEventListener('blur', reset);
+      });
+    })();
+  </script>
+{%- endif -%}

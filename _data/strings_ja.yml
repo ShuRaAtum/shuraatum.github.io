@@ -1,0 +1,35 @@
+nav:
+  about: 紹介
+  publications: 論文
+  projects: プロジェクト
+  cv: 経歴
+  blog: ブログ
+home:
+  about_heading: 紹介
+  news_heading: お知らせ
+  selected_publications_heading: 主要論文
+  advised_by: 指導教員
+  affil_separator: "、"
+  contact_note: ご連絡はメールでお願いします。最も早く返信できます。
+  scholar_stats: "Google Scholar 被引用数 %c件、h指数 %h"
+cv:
+  download_pdf: PDFをダウンロード（英語版）
+publications:
+  cited_by: "被引用 %n件"
+blog:
+  empty: まだ投稿はありません。
+lang:
+  native: 日本語
+research_map:
+  heading: プラットフォーム別の研究
+  summary: "%from〜%to年の論文%n編。点1つが論文1編で、塗りつぶした点は筆頭著者の論文です。"
+  first: 筆頭著者
+  co: 共著者
+  hint: 点にカーソルを合わせると論文名が表示され、クリックすると論文リストの該当箇所に移動します。
+  rows:
+    arm: ARM
+    embedded: MCU・RISC-V
+    x86: x86 SIMD
+    gpu: GPU
+    protocol: PQC・プロトコル
+    quantum: 量子回路

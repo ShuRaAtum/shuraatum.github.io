@@ -3,14 +3,15 @@ layout: about
 title: 소개
 permalink: /ko/
 lang: ko
+display_name: 엄시우
 
-role: "박사과정 · 정보컴퓨터공학과"
+role: "정보컴퓨터공학과 박사과정"
 lab:
   name: CryptoCraft 연구실
   url: https://sites.google.com/view/cc-hs
 university: 한성대학교
 advisor:
-  name: 서화정 교수님
+  name: 서화정 교수
   url: https://scholar.google.co.kr/citations?user=NJTYsz0AAAAJ
 
 links:
@@ -45,5 +46,6 @@ announcements:
 GPU 가속(CUDA, Apple Silicon Metal) 대칭키 암호와
 암호 벤치마킹·테스트 하네스 생성을 위한 AI 에이전트 기반 워크플로우도 함께 진행 중입니다.
 
-논문 실적: **SCI(E) 9편**, **KCI 8편**, **preprint 3편**. ICISC, PlatCon 및 국내
-암호학 학회에 발표한 컨퍼런스 논문 포함. 전체 목록은 [논문 페이지](/ko/publications/)를 참고하세요.
+{%- assign pc = site.data.research_map.counts -%}
+논문 실적: **SCI(E) {{ pc.scie }}편**{% if pc.journal > 0 %}, **IACR TCHES {{ pc.journal }}편**{% endif %}, **KCI {{ pc.kci }}편**,
+**국제학회 {{ pc.conference }}편**, **preprint {{ pc.preprint }}편**. 전체 목록은 [논문 페이지](/ko/publications/)를 참고하세요.

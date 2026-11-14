@@ -16,4 +16,8 @@ lang: ko
   {% if post.description %}<p>{{ post.description }}</p>{% endif %}
 </article>
 {%- endfor -%}
+{%- if posts.size == 0 -%}
+{%- assign blog_strings_key = "strings_" | append: page.lang -%}
+<p class="empty-state">{{ site.data[blog_strings_key].blog.empty }}</p>
+{%- endif -%}
 </div>

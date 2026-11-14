@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /en/blog/
-title: blog
+title: Blog
 description: Research notes, paper summaries, implementation deep-dives.
 nav: false
 pagination:
@@ -18,4 +18,8 @@ lang: en
   {% if post.description %}<p>{{ post.description }}</p>{% endif %}
 </article>
 {%- endfor -%}
+{%- if posts.size == 0 -%}
+{%- assign blog_strings_key = "strings_" | append: page.lang -%}
+<p class="empty-state">{{ site.data[blog_strings_key].blog.empty }}</p>
+{%- endif -%}
 </div>

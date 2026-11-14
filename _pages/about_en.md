@@ -1,10 +1,10 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /en/
 lang: en
 
-role: "Ph.D. Candidate · Information & Computer Engineering"
+role: "Ph.D. candidate in Information and Computer Engineering"
 lab:
   name: CryptoCraft Lab
   url: https://sites.google.com/view/cc-hs
@@ -45,6 +45,7 @@ infrastructure, and lightweight target platforms (Cortex-M, RV32). I also work o
 symmetric ciphers (CUDA, Apple Silicon Metal) and AI-agent-assisted workflows for cryptographic
 benchmarking and test-harness generation.
 
-Publications: **9 SCI(E)**, **8 KCI**, **3 preprints**, with conference papers at
-ICISC, PlatCon, and Korean cryptography venues. See the [publications](/en/publications/)
-page for the full list.
+{%- assign pc = site.data.research_map.counts -%}
+Publications: **{{ pc.scie }} SCI(E) journal papers**{% if pc.journal > 0 %}, **{{ pc.journal }} in IACR TCHES**{% endif %},
+**{{ pc.kci }} KCI journal papers**, **{{ pc.conference }} international conference papers**, and
+**{{ pc.preprint }} preprints**. See the [publications](/en/publications/) page for the full list.

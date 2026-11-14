@@ -1,24 +1,31 @@
 {%- comment -%}
-  Swaps the first path segment between /en and /ko.
-  Falls back to /en/ if neither prefix is present.
+  Links to the same page in every site language by swapping the first path
+  segment (/en, /ko, /ja). The current language is shown but not linked.
 {%- endcomment -%}
 {%- assign current_lang = page.lang | default: "en" -%}
-{%- if current_lang == "en" -%}
-  {%- assign other_lang = "ko" -%}
-{%- else -%}
-  {%- assign other_lang = "en" -%}
-{%- endif -%}
-{%- assign current_path = page.url -%}
-{%- assign segments = current_path | replace_first: "/" | split: "/" -%}
+{%- assign segments = page.url | replace_first: "/" | split: "/" -%}
 {%- assign rest = "" -%}
 {%- for seg in segments offset:1 -%}
   {%- assign rest = rest | append: "/" | append: seg -%}
 {%- endfor -%}
-{%- assign target = "/" | append: other_lang | append: rest -%}
-{%- if target == "/en" or target == "/ko" -%}{%- assign target = target | append: "/" -%}{%- endif -%}
-{%- assign current_key = "strings_" | append: current_lang -%}
-{%- assign current_strings = site.data[current_key] -%}
+{%- assign trailing = page.url | slice: -1 -%}
+{%- assign languages = "en,ko,ja" | split: "," -%}
 
-<a class="nav-link lang-switcher" href="{{ target | relative_url }}" hreflang="{{ other_lang }}">
-  {{ current_strings.lang.switch_to_other }}
-</a>
+<div class="lang-switch" role="group" aria-label="Language">
+  {%- for code in languages -%}
+    {%- assign code_strings_key = "strings_" | append: code -%}
+    {%- assign native = site.data[code_strings_key].lang.native -%}
+    {%- if page.lang -%}
+      {%- assign target = "/" | append: code | append: rest -%}
+      {%- if trailing == "/" -%}{%- assign target = target | append: "/" -%}{%- endif -%}
+    {%- else -%}
+      {%- comment -%} Pages without a language have no translations; go to that language's home. {%- endcomment -%}
+      {%- assign target = "/" | append: code | append: "/" -%}
+    {%- endif -%}
+    {%- if page.lang and code == current_lang -%}
+      <span class="lang-switch-item is-current" lang="{{ code }}" aria-current="true" title="{{ native }}">{{ code | upcase }}</span>
+    {%- else -%}
+      <a class="lang-switch-item" href="{{ target | relative_url }}" hreflang="{{ code }}" lang="{{ code }}" title="{{ native }}">{{ code | upcase }}</a>
+    {%- endif -%}
+  {%- endfor -%}
+</div>

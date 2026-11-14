@@ -1,27 +1,91 @@
-// Pretendard font for Korean — CDN @import
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@latest/dist/web/static/pretendard.css");
+// ============================================================================
+// Site design: "solder-mask" academic.
+// White paper, navy ink, one PCB-green accent taken from the embedded boards
+// this research targets. Pretendard for UI, headings and Korean; Source Serif 4
+// for English reading text. The platform x year research map on the about
+// page is the one expressive element; everything else stays quiet.
+// ============================================================================
 
-// Accent color override (per design spec — Academic Blue)
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-jp-dynamic-subset.css");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap");
+
 :root {
-  --global-theme-color: #0a66c2;
-  --global-hover-color: #084e94;
+  --paper: #ffffff;
+  --ink: #1b2430;
+  --ink-soft: #5e6878;
+  --rule: #e3e6ea;
+  --pcb: #1e6b57;
+  --pcb-deep: #154d3f;
+
+  --font-ui: "Pretendard", "Pretendard JP", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-text: "Source Serif 4", "Pretendard", Georgia, serif;
+  --measure: 66ch;
+
+  --global-bg-color: var(--paper);
+  --global-card-bg-color: var(--paper);
+  --global-text-color: var(--ink);
+  --global-text-color-light: var(--ink-soft);
+  --global-theme-color: var(--pcb);
+  --global-hover-color: var(--pcb-deep);
+  --global-divider-color: var(--rule);
+  --global-footer-bg-color: transparent;
+  --global-footer-text-color: var(--ink-soft);
+  --global-footer-link-color: var(--ink-soft);
 }
 
 html[data-theme="dark"] {
-  --global-theme-color: #5aa3ec;
-  --global-hover-color: #7fbef0;
+  --paper: #14181d;
+  --ink: #e4e8ec;
+  --ink-soft: #97a1ad;
+  --rule: #2b323a;
+  --pcb: #5dbf9c;
+  --pcb-deep: #86d3b6;
+
+  --global-bg-color: var(--paper);
+  --global-card-bg-color: var(--paper);
+  --global-text-color: var(--ink);
+  --global-text-color-light: var(--ink-soft);
+  --global-theme-color: var(--pcb);
+  --global-hover-color: var(--pcb-deep);
+  --global-divider-color: var(--rule);
+  --global-footer-bg-color: transparent;
+  --global-footer-text-color: var(--ink-soft);
+  --global-footer-link-color: var(--ink-soft);
 }
 
-// Korean typography via :lang(ko)
+// ---------------------------------------------------------------------------
+// Base type
+// ---------------------------------------------------------------------------
+
+body {
+  font-family: var(--font-ui);
+  font-weight: 400;
+  color: var(--ink);
+  background-color: var(--paper);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-ui);
+}
+
 :lang(ko) {
-  font-family: "Pretendard", -apple-system, BlinkMacSystemFont,
-               "Roboto", "Helvetica Neue", Arial, sans-serif;
-  letter-spacing: -0.01em;
+  word-break: keep-all;
 }
 
-:lang(ko) h1, :lang(ko) h2, :lang(ko) h3, :lang(ko) h4 {
-  font-family: "Pretendard", "Roboto Slab", sans-serif;
-  font-weight: 700;
+// Japanese pages: Pretendard JP for everything, including reading text.
+html:lang(ja) {
+  --font-ui: "Pretendard JP", "Pretendard", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  --font-text: var(--font-ui);
+  line-break: strict;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--pcb);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
 // Language switcher styling — distinct from regular nav items
@@ -34,6 +98,738 @@ html[data-theme="dark"] {
   &:hover {
     opacity: 1;
   }
+}
+
+// ---------------------------------------------------------------------------
+// Navbar: aligned to the 880px content column, sentence-case items.
+// ---------------------------------------------------------------------------
+nav#navbar {
+  opacity: 1;
+  width: 100%;
+  background-color: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  box-shadow: none;
+
+  &.fixed-top {
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+
+  // Match the academic-page content width AND its outer edges. Bootstrap's
+  // `.container` has 12px gutter padding on each side; zero it out so the
+  // brand and nav items align exactly with the content column on desktop.
+  // Mobile (≤767px) re-adds horizontal padding below.
+  > .container {
+    width: 100%;
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .navbar-brand {
+    color: var(--ink);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .navbar-nav {
+    align-items: center;
+    gap: 0.15rem;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    padding: 0.55rem 0.7rem;
+    line-height: 1;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    color: var(--ink-soft);
+    &:hover { color: var(--ink); }
+  }
+
+  .navbar-nav .nav-item.active > .nav-link {
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: var(--pcb);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.55em;
+  }
+
+  .lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.1rem;
+    margin-left: 0.35rem;
+    padding-left: 0.6rem;
+    border-left: 1px solid var(--rule);
+  }
+
+  .lang-switch-item {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    padding: 0.45rem 0.35rem;
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-radius: 3px;
+
+    &:hover { color: var(--ink); }
+
+    &.is-current {
+      color: var(--ink);
+      text-decoration: underline;
+      text-decoration-color: var(--pcb);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 0.45em;
+    }
+  }
+
+  .lang-switcher {
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 500 !important;
+    opacity: 0.75;
+    &:hover { opacity: 1; }
+  }
+
+  // Align the dark-mode toggle button vertically with the surrounding
+  // nav-links instead of the al-folio default 4px nudge.
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    margin-left: 0.25rem;
+  }
+
+  @media (min-width: 576px) {
+    #light-toggle { transform: none; }
+  }
+
+  // The full multilingual menu does not fit at Bootstrap's `sm` navbar
+  // breakpoint. Keep the collapsed menu until `md` so the navbar stays one row.
+  &.navbar-expand-md {
+    @media (max-width: 767.98px) {
+      > .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .navbar-toggler-main {
+        display: block;
+        margin-left: auto;
+      }
+
+      .navbar-collapse-main {
+        flex-basis: 100%;
+        width: 100%;
+        text-align: left;
+      }
+
+      .navbar-menu-list {
+        align-items: flex-start;
+        margin-left: 0;
+        padding-top: 0.5rem;
+        width: 100%;
+      }
+
+      .navbar-nav .nav-item .nav-link {
+        padding: 0.55rem 0;
+      }
+
+      .lang-switch {
+        margin: 0.25rem 0 0;
+        padding-left: 0;
+        border-left: 0;
+        gap: 0.5rem;
+      }
+
+      .lang-switch-item { padding-left: 0; padding-right: 0.25rem; }
+
+      .toggle-container {
+        margin-left: 0;
+        padding: 0.35rem 0 0.5rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .navbar-collapse-main {
+        flex-basis: auto;
+        width: auto;
+      }
+
+      .navbar-menu-list {
+        flex-direction: row;
+      }
+
+      .navbar-toggler-main {
+        display: none;
+      }
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Page frame
+// ---------------------------------------------------------------------------
+
+.academic-page {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 1.5rem 0 4rem;
+}
+
+// Section headings: sentence case, set in the UI face. No eyebrow labels.
+.academic-section-label {
+  font-family: var(--font-ui);
+  font-size: 1.25rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  text-transform: none;
+  color: var(--ink);
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 0;
+}
+
+.academic-section {
+  margin-top: 3.5rem;
+}
+
+.academic-page-header {
+  margin: 1.5rem 0 2.5rem;
+
+  .academic-page-title {
+    font-family: var(--font-ui);
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    color: var(--ink);
+    margin: 0 0 0.5rem;
+
+  }
+
+  .academic-page-description {
+    font-family: var(--font-text);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: var(--measure);
+  }
+
+  :lang(ko) & .academic-page-description,
+  :lang(ja) & .academic-page-description { font-family: var(--font-ui); }
+}
+
+// ---------------------------------------------------------------------------
+// About: hero
+// ---------------------------------------------------------------------------
+
+.academic-hero {
+  display: block;
+  margin: 2.5rem 0 0;
+
+  &.has-photo {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+
+    @media (max-width: 575.98px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.academic-hero-photo {
+  picture, figure { margin: 0; width: 120px; max-width: 100%; }
+
+  img {
+    width: 120px !important;
+    max-width: 100%;
+    height: 120px !important;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+  }
+}
+
+.academic-hero-info {
+  .academic-name {
+    font-family: var(--font-ui);
+    font-size: clamp(2.25rem, 6vw, 3.25rem);
+    font-weight: 750;
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+    color: var(--ink);
+    margin: 0 0 1rem;
+  }
+
+  .academic-role {
+    font-family: var(--font-text);
+    font-size: 1.2rem;
+    line-height: 1.45;
+    color: var(--ink);
+    margin: 0 0 0.25rem;
+  }
+
+  .academic-affil {
+    font-family: var(--font-text);
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin: 0;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: var(--rule);
+      text-underline-offset: 0.2em;
+      &:hover { color: var(--pcb); text-decoration-color: currentColor; }
+    }
+  }
+
+  :lang(ko) & .academic-role,
+  :lang(ko) & .academic-affil,
+  :lang(ja) & .academic-role,
+  :lang(ja) & .academic-affil { font-family: var(--font-ui); }
+}
+
+.academic-name-latin {
+  font-family: var(--font-ui);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  margin: -0.6rem 0 1rem;
+}
+
+.academic-stats {
+  margin: 0.9rem 0 0;
+  font-size: 0.9rem;
+
+  a {
+    color: var(--ink-soft);
+    text-decoration: underline;
+    text-decoration-color: var(--rule);
+    text-underline-offset: 0.2em;
+    &:hover { color: var(--pcb); text-decoration-color: currentColor; }
+  }
+}
+
+.academic-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 1.25rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  a {
+    color: var(--pcb);
+    text-decoration: none;
+    &:hover { color: var(--pcb-deep); text-decoration: underline; text-underline-offset: 0.25em; }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// About: platform x year research map
+// ---------------------------------------------------------------------------
+
+.research-map {
+  margin-top: 3.5rem;
+
+  .research-map-heading {
+    font-size: 1.25rem;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    margin: 0 0 0.35rem;
+  }
+
+  .research-map-summary {
+    font-family: var(--font-text);
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin: 0 0 1.25rem;
+    max-width: var(--measure);
+  }
+
+  :lang(ko) & .research-map-summary,
+  :lang(ja) & .research-map-summary { font-family: var(--font-ui); }
+}
+
+.research-map-grid {
+  --label: 9.5rem;
+  border-top: 2px solid var(--ink);
+
+  @media (max-width: 575.98px) {
+    --label: 5.75rem;
+  }
+}
+
+.rm-row {
+  display: grid;
+  grid-template-columns: var(--label) repeat(var(--years), minmax(0, 1fr));
+  align-items: stretch;
+  border-bottom: 1px solid var(--rule);
+
+  &.rm-head {
+    border-bottom-color: var(--ink);
+  }
+}
+
+.rm-label,
+.rm-year {
+  font-size: 0.85rem;
+  line-height: 1.3;
+  padding: 0.65rem 0.5rem 0.65rem 0;
+}
+
+.rm-label {
+  font-weight: 600;
+  color: var(--ink);
+  align-self: center;
+
+  @media (max-width: 575.98px) {
+    font-size: 0.78rem;
+  }
+}
+
+.rm-year {
+  font-weight: 500;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+  padding-left: 0.5rem;
+
+  @media (max-width: 575.98px) {
+    font-size: 0.72rem;
+    padding-left: 0.25rem;
+  }
+}
+
+.rm-cell {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 6px;
+  padding: 0.7rem 0.5rem;
+  border-left: 1px solid var(--rule);
+  min-height: 2.75rem;
+
+  @media (max-width: 575.98px) {
+    gap: 4px;
+    padding: 0.6rem 0.25rem;
+  }
+}
+
+.rm-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--pcb);
+  background: transparent;
+  flex: none;
+
+  &.is-first { background: var(--pcb); }
+}
+
+a.rm-dot {
+  transition: transform 120ms ease-out;
+
+  &:hover,
+  &:focus-visible {
+    transform: scale(1.4);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--paper), 0 0 0 5px var(--ink);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+.research-map-foot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem 1.5rem;
+  margin-top: 0.75rem;
+}
+
+.research-map-caption {
+  flex: 1 1 22rem;
+  min-height: 2.8em;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--ink-soft);
+
+  &.is-active {
+    color: var(--ink);
+    font-weight: 600;
+  }
+}
+
+.research-map-legend {
+  display: flex;
+  gap: 1.25rem;
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+
+  span { display: inline-flex; align-items: center; gap: 0.4rem; }
+  .rm-dot { width: 10px; height: 10px; }
+}
+
+// ---------------------------------------------------------------------------
+// About: prose and contact
+// ---------------------------------------------------------------------------
+
+.academic-prose {
+  font-family: var(--font-text);
+  font-size: 1.075rem;
+  line-height: 1.7;
+  color: var(--ink);
+  max-width: var(--measure);
+
+  p { margin: 0 0 1rem; }
+  p:last-child { margin-bottom: 0; }
+  strong { font-weight: 600; }
+  a {
+    color: var(--pcb);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--pcb) 35%, transparent);
+    text-underline-offset: 0.2em;
+  }
+  a:hover { color: var(--pcb-deep); text-decoration-color: currentColor; }
+
+  :lang(ko) &,
+  :lang(ja) & {
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    line-height: 1.8;
+    letter-spacing: -0.005em;
+  }
+}
+
+.academic-social {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+
+  .contact-icons {
+    font-size: 1.25rem;
+    a { margin-right: 0.75rem; color: var(--ink); }
+    a:hover { color: var(--pcb); }
+  }
+
+  .contact-note {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Publication lists (publications page and selected papers on about)
+// The venue sits quietly in a left column; the title leads.
+// ---------------------------------------------------------------------------
+
+.publications {
+  h2.bibliography {
+    font-family: var(--font-ui);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--pcb);
+    text-align: left;
+    font-variant-numeric: tabular-nums;
+    border-top: 1px solid var(--rule);
+    padding-top: 0.9rem;
+    margin: 2.75rem 0 1.25rem;
+  }
+
+  > h2.bibliography:first-child { margin-top: 0; }
+
+  ol.bibliography {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      margin: 0 0 1.75rem;
+    }
+
+    li:last-child { margin-bottom: 0; }
+
+    li > .row {
+      display: grid;
+      grid-template-columns: 6.5rem minmax(0, 1fr);
+      gap: 1.25rem;
+      margin: 0;
+
+      > [class*="col"] {
+        width: auto;
+        max-width: none;
+        flex: none;
+        padding: 0;
+      }
+
+      @media (max-width: 575.98px) {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.25rem;
+      }
+    }
+
+    li .abbr {
+      padding-top: 0.15rem;
+
+      .badge {
+        display: inline;
+        width: auto !important;
+        padding: 0;
+        background: none !important;
+        border: 0;
+        border-radius: 0;
+        font-family: var(--font-ui);
+        font-size: 0.8rem;
+        font-weight: 600;
+        line-height: 1.4;
+        letter-spacing: 0;
+        text-align: left;
+        color: var(--ink-soft) !important;
+        margin: 0;
+        text-decoration: none;
+        white-space: normal;
+
+        a, div { color: inherit; }
+      }
+    }
+
+    li .title {
+      font-family: var(--font-ui);
+      font-size: 1.025rem;
+      font-weight: 600;
+      line-height: 1.4;
+      letter-spacing: -0.005em;
+      color: var(--ink);
+      margin-bottom: 0.3rem;
+    }
+
+    li .author,
+    li .periodical {
+      font-family: var(--font-text);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--ink-soft);
+    }
+
+    li .author em {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--ink);
+      border-bottom: 0;
+    }
+
+    li .author a { color: inherit; }
+
+    li .periodical em { font-style: italic; }
+
+    li .periodical:empty { display: none; }
+
+    li .more-authors {
+      color: var(--ink-soft);
+      border-bottom: 1px dashed var(--rule);
+      cursor: pointer;
+    }
+
+    li .links,
+    li .badges {
+      display: inline-flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem;
+      vertical-align: middle;
+      margin-top: 0.5rem;
+    }
+
+    li .cite-count {
+      font-family: var(--font-ui);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--pcb);
+      text-decoration: none;
+      margin-left: 0.35rem;
+      &:hover { text-decoration: underline; text-underline-offset: 0.2em; }
+    }
+
+    li .links {
+
+      a.btn {
+        font-family: var(--font-ui);
+        font-size: 0.78rem;
+        font-weight: 600;
+        line-height: 1.4;
+        text-transform: none;
+        letter-spacing: 0;
+        color: var(--ink-soft);
+        background: transparent;
+        border: 1px solid var(--rule);
+        border-radius: 3px;
+        padding: 0.15rem 0.6rem;
+        margin: 0 0.4rem 0 0;
+
+        &:hover {
+          color: var(--pcb);
+          border-color: var(--pcb);
+        }
+
+        &.award {
+          color: var(--pcb);
+          border-color: var(--pcb);
+        }
+      }
+    }
+  }
+}
+
+// Blog index with no posts yet
+.empty-state {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+// ---------------------------------------------------------------------------
+// Footer: a quiet credit line under a rule, not a fixed black bar.
+// ---------------------------------------------------------------------------
+
+footer.sticky-bottom,
+footer.fixed-bottom {
+  background: transparent;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  padding: 1.25rem 0;
+
+  a { color: var(--ink-soft); text-decoration: underline; text-underline-offset: 0.2em; }
+  a:hover { color: var(--pcb); }
 }
 
 // Project cards — text-only treatment (no thumbnails).
@@ -110,18 +906,25 @@ html[data-theme="dark"] {
 
 // CV page — structured CV
 .cv-page {
+  .cv-actions {
+    margin: 1rem 0 0;
+  }
+
   .cv-pdf-link {
     display: inline-flex;
-    margin-left: 0.75rem;
-    font-size: 0.72rem;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid var(--pcb);
+    border-radius: 3px;
+    font-size: 0.875rem;
     font-weight: 600;
     letter-spacing: 0;
     text-transform: none;
     color: var(--global-theme-color);
     vertical-align: middle;
     &:hover {
-      color: var(--global-hover-color);
-      text-decoration: underline;
+      color: var(--paper);
+      background-color: var(--pcb);
+      text-decoration: none;
     }
   }
 
@@ -203,274 +1006,6 @@ html[data-theme="dark"] {
   font-size: 0.85rem;
   color: var(--global-text-color-light);
   line-height: 1.55;
-}
-
-// Academic navbar: aligned to content (880px), sentence-case items, lighter weight.
-nav#navbar {
-  opacity: 1;
-  width: 100%;
-
-  &.fixed-top {
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-  }
-
-  // Match the academic-page content width AND its outer edges. Bootstrap's
-  // `.container` has 12px gutter padding on each side; zero it out so the
-  // brand and nav items align exactly with the content column on desktop.
-  // Mobile (≤767px) re-adds horizontal padding below.
-  > .container {
-    width: 100%;
-    max-width: 880px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .navbar-brand {
-    font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    padding-top: 0.4rem;
-    padding-bottom: 0.4rem;
-  }
-
-  .navbar-nav {
-    align-items: center;
-    gap: 0.15rem;
-  }
-
-  .navbar-nav .nav-item .nav-link {
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0;
-    padding: 0.55rem 0.7rem;
-    line-height: 1;
-  }
-
-  .navbar-nav .nav-item.active > .nav-link {
-    font-weight: 600;
-    color: var(--global-theme-color);
-  }
-
-  .lang-switcher {
-    text-transform: none;
-    letter-spacing: 0;
-    font-weight: 500 !important;
-    opacity: 0.75;
-    &:hover { opacity: 1; }
-  }
-
-  // Align the dark-mode toggle button vertically with the surrounding
-  // nav-links instead of the al-folio default 4px nudge.
-  .toggle-container {
-    display: flex;
-    align-items: center;
-    margin-left: 0.25rem;
-  }
-
-  @media (min-width: 576px) {
-    #light-toggle { transform: none; }
-  }
-
-  // The full multilingual menu does not fit at Bootstrap's `sm` navbar
-  // breakpoint. Keep the collapsed menu until `md` so the navbar stays one row.
-  &.navbar-expand-md {
-    @media (max-width: 767.98px) {
-      > .container {
-        padding-left: 15px;
-        padding-right: 15px;
-      }
-
-      .navbar-toggler-main {
-        display: block;
-        margin-left: auto;
-      }
-
-      .navbar-collapse-main {
-        flex-basis: 100%;
-        width: 100%;
-        text-align: left;
-      }
-
-      .navbar-menu-list {
-        align-items: flex-start;
-        margin-left: 0;
-        padding-top: 0.5rem;
-        width: 100%;
-      }
-
-      .navbar-nav .nav-item .nav-link {
-        padding: 0.55rem 0;
-      }
-
-      .toggle-container {
-        margin-left: 0;
-        padding: 0.35rem 0 0.5rem;
-      }
-    }
-
-    @media (min-width: 768px) {
-      .navbar-collapse-main {
-        flex-basis: auto;
-        width: auto;
-      }
-
-      .navbar-menu-list {
-        flex-direction: row;
-      }
-
-      .navbar-toggler-main {
-        display: none;
-      }
-    }
-  }
-}
-
-// ----------------------------------------------------------------------------
-// Academic (A3) style — Modern Academic. Replaces editorial-* hero treatment.
-// Photo + name + affiliation as a horizontal hero block; small uppercase
-// section labels for "About", "Selected Publications", etc.
-// ----------------------------------------------------------------------------
-
-.academic-page {
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 1rem 0 4rem;
-}
-
-.academic-hero {
-  display: grid;
-  grid-template-columns: 120px minmax(0, 1fr);
-  gap: 1.4rem;
-  align-items: start;
-  margin: 1rem 0 2rem;
-
-  @media (max-width: 575.98px) {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-}
-
-.academic-hero-photo {
-  picture, figure { margin: 0; width: 120px; max-width: 100%; }
-
-  img {
-    width: 120px !important;
-    max-width: 100%;
-    height: 120px !important;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 6px;
-    display: block;
-  }
-}
-
-.academic-hero-info {
-  .academic-name {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    margin: 0 0 0.35rem;
-    line-height: 1.2;
-  }
-
-  .academic-role {
-    font-size: 0.95rem;
-    color: var(--global-text-color);
-    margin: 0 0 0.2rem;
-    line-height: 1.45;
-  }
-
-  .academic-affil {
-    font-size: 0.9rem;
-    color: var(--global-text-color-light);
-    margin: 0 0 0.15rem;
-    line-height: 1.45;
-
-    a {
-      color: var(--global-theme-color);
-      text-decoration: none;
-      &:hover { color: var(--global-hover-color); text-decoration: underline; }
-    }
-  }
-
-  :lang(ko) & .academic-name {
-    letter-spacing: -0.02em;
-  }
-}
-
-.academic-links {
-  margin-top: 0.7rem;
-  font-size: 0.88rem;
-  line-height: 1.5;
-
-  a {
-    color: var(--global-theme-color);
-    text-decoration: none;
-    &:hover { color: var(--global-hover-color); text-decoration: underline; }
-  }
-
-  .sep {
-    color: var(--global-divider-color);
-    margin: 0 0.4rem;
-    user-select: none;
-  }
-}
-
-.academic-section {
-  margin-top: 2rem;
-}
-
-.academic-section-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--global-text-color-light);
-  margin: 0 0 0.7rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--global-divider-color);
-}
-
-.academic-prose {
-  font-size: 0.95rem;
-  line-height: 1.65;
-  color: var(--global-text-color);
-
-  p { margin: 0 0 0.85rem; }
-  p:last-child { margin-bottom: 0; }
-  strong { font-weight: 600; }
-  a { color: var(--global-theme-color); }
-  a:hover { color: var(--global-hover-color); }
-}
-
-.academic-social {
-  margin-top: 2rem;
-
-  .contact-icons {
-    font-size: 1.25rem;
-    a { margin-right: 0.55rem; }
-  }
-}
-
-// Publications and Blog index pages — emitted by the local page.liquid
-// override (Task 5). The post-header is replaced with .academic-section-label.
-.academic-page-header {
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-
-  .academic-section-label { margin-bottom: 0.4rem; }
-
-  .academic-page-description {
-    font-size: 0.95rem;
-    color: var(--global-text-color);
-    line-height: 1.6;
-    margin: 0;
-  }
 }
 
 @layer components {

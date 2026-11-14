@@ -51,6 +51,10 @@ cv:
 
     Awards:
       - title: National Cryptography Competition — Excellence Award
+        date: 2026
+      - title: WISA 2026 — Best Paper Award
+        date: 2026
+      - title: National Cryptography Competition — Excellence Award
         date: 2025
       - title: National Cryptography Competition — Excellence Award
         date: 2024
@@ -99,13 +103,15 @@ cv:
 
     Publications Summary:
       - name: SCI(E) Journals
-        summary: "9 papers (Applied Sciences, Electronics, Sensors, Symmetry)"
+        summary: "23 papers (Applied Sciences, Electronics, Mathematics, IEEE Access, Sensors, Symmetry)"
+      - name: IACR TCHES
+        summary: "1 paper (TCHES 2026, first author)"
       - name: KCI Journals
-        summary: "8 papers (JKIISC, JKIICE, KTCCS, SMJ)"
+        summary: "11 papers (JKIISC, KTCCS, JKIICE, SMJ)"
       - name: Preprints
-        summary: "3 papers (Cryptology ePrint Archive)"
+        summary: "14 papers (Cryptology ePrint Archive)"
       - name: International Conferences
-        summary: "2 papers (ICISC 2025, PlatCon 2022 — Best Paper)"
+        summary: "13 papers (ICISC, WISA, PlatCon; WISA 2026 and PlatCon 2022 Best Paper)"
       - name: Domestic Conferences (Korea)
         summary: "14+ presentations (CISC-S, CISC-W, ASK, ACK, regional chapters)"
 

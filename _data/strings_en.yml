@@ -5,11 +5,30 @@ nav:
   cv: CV
   blog: Blog
 home:
-  about_heading: about
-  news_heading: news
-  selected_publications_heading: selected publications
+  about_heading: About
+  news_heading: News
+  selected_publications_heading: Selected publications
+  advised_by: Advised by
+  contact_note: Best reached by email. I respond fastest to short, specific messages.
+  scholar_stats: "%c citations and an h-index of %h on Google Scholar"
 cv:
-  download_pdf: Download
+  download_pdf: Download PDF
+publications:
+  cited_by: "Cited by %n"
+blog:
+  empty: No posts yet.
 lang:
-  switch_to_other: 한국어
-  current: EN
+  native: English
+research_map:
+  heading: Research by platform
+  summary: "%n papers, %from–%to. Each dot is one paper; filled dots are first-author work."
+  first: First author
+  co: Co-author
+  hint: Point at a dot to see the paper, or select it to open it in the publication list.
+  rows:
+    arm: ARM
+    embedded: MCU & RISC-V
+    x86: x86 SIMD
+    gpu: GPU
+    protocol: PQC & protocols
+    quantum: Quantum circuits

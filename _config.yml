@@ -4,7 +4,7 @@
 
 title: blank # using first/middle/last_name for the full name display
 first_name: Si-Woo
-middle_name: ""
+middle_name:
 last_name: Eum
 email: shuraatum@gmail.com
 contact_note: >
@@ -16,7 +16,6 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
 keywords: post-quantum cryptography, KpqC, NIST PQC, ARM NEON, RISC-V, CUDA GPU, SIMD, embedded cryptography
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🔐 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -95,7 +94,7 @@ al_folio:
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: true
+footer_fixed: false
 search_enabled: true
 socials_in_search: true
 posts_in_search: true
@@ -346,8 +345,8 @@ display_categories: [] # these categories will be displayed on the front page of
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Eum]
+  first_name: [Si-Woo, S.-W., S.]
 
   style: apa
   locale: en
@@ -388,6 +387,7 @@ filtered_bibtex_keywords:
     annotation,
     arxiv,
     award,
+    platform,
     award_name,
     bibtex_show,
     blog,
@@ -410,7 +410,7 @@ filtered_bibtex_keywords:
   ]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
-max_author_limit: 3 # leave blank to always show all authors
+max_author_limit: # leave blank to always show all authors
 more_authors_animation_delay: 10 # more authors are revealed on click using animation; smaller delay means faster animation
 
 # Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.

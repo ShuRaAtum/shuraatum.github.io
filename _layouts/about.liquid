@@ -9,7 +9,7 @@ layout: default
 
 <div class="post academic-page">
 
-  <header class="academic-hero">
+  <header class="academic-hero{% if page.profile and page.profile.image %} has-photo{% endif %}">
     {% if page.profile and page.profile.image %}
       {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
       <div class="academic-hero-photo">
@@ -25,47 +25,65 @@ layout: default
     {% endif %}
 
     <div class="academic-hero-info">
-      <h1 class="academic-name">
-        {% if site.title == 'blank' %}
+      {%- capture latin_name -%}
+        {%- if site.title == 'blank' -%}
           {{ site.first_name }}{% if site.middle_name and site.middle_name != "" %} {{ site.middle_name }}{% endif %} {{ site.last_name }}
-        {% else %}
+        {%- else -%}
           {{ site.title }}
-        {% endif %}
-      </h1>
+        {%- endif -%}
+      {%- endcapture -%}
+      {% if page.display_name %}
+        <h1 class="academic-name">{{ page.display_name }}</h1>
+        <p class="academic-name-latin" lang="en">{{ latin_name | strip }}</p>
+      {% else %}
+        <h1 class="academic-name">{{ latin_name | strip }}</h1>
+      {% endif %}
 
       {% if page.role %}<p class="academic-role">{{ page.role }}</p>{% endif %}
 
       {% if page.lab or page.university %}
         <p class="academic-affil">
-          {% if page.lab %}{% if page.lab.url %}<a href="{{ page.lab.url }}">{{ page.lab.name }}</a>{% else %}{{ page.lab.name }}{% endif %}{% endif %}{% if page.lab and page.university %}, {% endif %}{% if page.university %}{{ page.university }}{% endif %}
+          {% if page.lab %}{% if page.lab.url %}<a href="{{ page.lab.url }}">{{ page.lab.name }}</a>{% else %}{{ page.lab.name }}{% endif %}{% endif %}{% if page.lab and page.university %}{{ s.home.affil_separator | default: ', ' }}{% endif %}{% if page.university %}{{ page.university }}{% endif %}
         </p>
       {% endif %}
 
       {% if page.advisor %}
         <p class="academic-affil">
-          Advised by
+          {% if s and s.home.advised_by %}{{ s.home.advised_by }}{% else %}Advised by{% endif %}
           {% if page.advisor.url %}<a href="{{ page.advisor.url }}">{{ page.advisor.name }}</a>{% else %}{{ page.advisor.name }}{% endif %}
         </p>
       {% endif %}
 
       {% if page.links %}
         <p class="academic-links">
-          {% for link in page.links %}{% unless forloop.first %}<span class="sep">·</span>{% endunless %}<a href="{{ link.url }}"{% if link.url contains '://' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.label }}</a>{% endfor %}
+          {% for link in page.links %}<a href="{{ link.url }}"{% if link.url contains '://' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.label }}</a>{% endfor %}
+        </p>
+      {% endif %}
+
+      {%- assign scholar_meta = site.data.citations.metadata -%}
+      {% if scholar_meta.total_citations and s.home.scholar_stats %}
+        <p class="academic-stats">
+          <a href="https://scholar.google.com/citations?user={{ site.data.socials.scholar_userid }}" target="_blank" rel="noopener noreferrer">
+            {{- s.home.scholar_stats | replace: '%c', scholar_meta.total_citations | replace: '%h', scholar_meta.h_index -}}
+          </a>
         </p>
       {% endif %}
     </div>
   </header>
 
+  {%- assign lang = page.lang | default: site.lang -%}
+  {% include research_map.liquid %}
+
   <article>
 
     <section class="academic-section">
-      <p class="academic-section-label">{% if s %}{{ s.home.about_heading }}{% else %}about{% endif %}</p>
+      <h2 class="academic-section-label">{% if s %}{{ s.home.about_heading }}{% else %}About{% endif %}</h2>
       <div class="academic-prose">{{ content }}</div>
     </section>
 
     {% if page.selected_papers %}
       <section class="academic-section">
-        <p class="academic-section-label">{% if s %}{{ s.home.selected_publications_heading }}{% else %}selected publications{% endif %}</p>
+        <h2 class="academic-section-label">{% if s %}{{ s.home.selected_publications_heading }}{% else %}Selected publications{% endif %}</h2>
         {% include selected_papers.liquid %}
       </section>
     {% endif %}
@@ -73,7 +91,7 @@ layout: default
     {% if page.social %}
       <section class="academic-section academic-social">
         <div class="contact-icons">{% social_links %}</div>
-        {% if site.contact_note %}<div class="contact-note">{{ site.contact_note }}</div>{% endif %}
+        {% assign contact_note = s.home.contact_note | default: site.contact_note %}{% if contact_note %}<div class="contact-note">{{ contact_note }}</div>{% endif %}
       </section>
     {% endif %}
 
