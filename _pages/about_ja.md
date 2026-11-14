@@ -34,18 +34,13 @@ announcements:
   enabled: false
 ---
 
-韓国・Hansung University 情報コンピュータ工学科の博士課程に在籍し、
-[CryptoCraft Lab](https://sites.google.com/view/cc-hs)で
-[ソ・ファジョン教授](https://scholar.google.co.kr/citations?user=NJTYsz0AAAAJ)の指導のもと、
-**プラットフォームに最適化した暗号実装**を研究しています。
-紙の上で設計された暗号アルゴリズムを、ARM・RISC-V・GPU といった実際のハードウェアで最大限の性能まで引き出すことに取り組んでいます。
+Hansung University 情報コンピュータ工学科の博士課程に在籍し、[CryptoCraft Lab](https://sites.google.com/view/cc-hs)で
+[ソ・ファジョン教授](https://scholar.google.co.kr/citations?user=NJTYsz0AAAAJ)の指導を受けています。
+暗号アルゴリズムを実際のハードウェアで高速に動かす実装を研究しています。
+対象はARMやRISC-Vのマイクロコントローラ、ARMv8やx86プロセッサ、GPUです。
 
-最近は**耐量子計算機暗号（PQC）のベンチマークと実装**を中心に、
-[KpqC](https://www.kpqc.or.kr/)および NIST PQC の候補アルゴリズムを対象として、ハイブリッド TLS 1.3、
-共同 PKI 基盤、軽量環境（Cortex-M、RV32）への適用を扱っています。
-あわせて、GPU（CUDA、Apple Silicon Metal）による共通鍵暗号の高速化や、
-暗号ベンチマーク・テストハーネス生成のための AI エージェント活用ワークフローにも取り組んでいます。
+現在は**耐量子計算機暗号**を中心に研究しています。KpqCやNIST PQCの方式をベンチマークして最適化し、
+ハイブリッドTLS 1.3やPKIの中での性能を分析しています。ARIAやLEAなどのブロック暗号のGPU実装にも取り組んでいます。
 
-{% assign pc = site.data.research_map.counts -%}
-論文実績：**SCI(E) 論文誌 {{ pc.scie }}編**{% if pc.journal > 0 %}、**IACR TCHES {{ pc.journal }}編**{% endif %}、**KCI 論文誌 {{ pc.kci }}編**、
-**国際会議 {{ pc.conference }}編**、**プレプリント {{ pc.preprint }}編**。全リストは[論文ページ](/ja/publications/)をご覧ください。
+最近の成果は[IACR TCHES 2026](https://doi.org/10.46586/tches.v2026.i4.575-596)に掲載され、
+GPU HCTR2-ARIAの論文は**WISA 2026で最優秀論文賞**を受賞しました。

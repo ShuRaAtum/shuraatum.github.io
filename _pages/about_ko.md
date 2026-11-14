@@ -34,18 +34,13 @@ announcements:
   enabled: false
 ---
 
-한성대학교 정보컴퓨터공학과 박사과정에 재학 중이며,
-[CryptoCraft 연구실](https://sites.google.com/view/cc-hs)에서
-[서화정 교수님](https://scholar.google.co.kr/citations?user=NJTYsz0AAAAJ)의 지도 아래
-**플랫폼 최적화 암호 구현**을 연구하고 있습니다.
-종이 위에서 설계된 암호 알고리즘을 ARM, RISC-V, GPU 하드웨어에서 최대 성능으로 끌어내는 일에 관심이 있습니다.
+한성대학교 정보컴퓨터공학과 박사과정으로, [CryptoCraft 연구실](https://sites.google.com/view/cc-hs)에서
+[서화정 교수님](https://scholar.google.co.kr/citations?user=NJTYsz0AAAAJ)의 지도를 받고 있습니다.
+암호 알고리즘이 실제 하드웨어에서 빠르게 동작하도록 구현합니다.
+대상은 ARM과 RISC-V 마이크로컨트롤러, ARMv8과 x86 프로세서, GPU입니다.
 
-최근 주제는 **양자내성암호(PQC) 벤치마킹과 엔지니어링**으로,
-[KpqC](https://www.kpqc.or.kr/)와 NIST PQC 후보 알고리즘을 대상으로 하이브리드 TLS 1.3,
-공동 PKI 인프라, 경량 환경(Cortex-M, RV32) 적용을 다루고 있습니다.
-GPU 가속(CUDA, Apple Silicon Metal) 대칭키 암호와
-암호 벤치마킹과 테스트 하네스 생성을 위한 AI 에이전트 기반 워크플로우도 함께 진행 중입니다.
+지금은 **양자내성암호**를 주로 연구합니다. KpqC와 NIST PQC 알고리즘을 벤치마킹하고 최적화하며,
+하이브리드 TLS 1.3과 PKI 안에서의 성능을 분석합니다. ARIA, LEA 같은 블록 암호의 GPU 구현도 함께 하고 있습니다.
 
-{% assign pc = site.data.research_map.counts -%}
-논문 실적: **SCI(E) {{ pc.scie }}편**{% if pc.journal > 0 %}, **IACR TCHES {{ pc.journal }}편**{% endif %}, **KCI {{ pc.kci }}편**,
-**국제학회 {{ pc.conference }}편**, **preprint {{ pc.preprint }}편**. 전체 목록은 [논문 페이지](/ko/publications/)를 참고하세요.
+최근 연구는 [IACR TCHES 2026](https://doi.org/10.46586/tches.v2026.i4.575-596)에 게재되었고,
+GPU HCTR2-ARIA 논문은 **WISA 2026에서 최우수논문상**을 받았습니다.

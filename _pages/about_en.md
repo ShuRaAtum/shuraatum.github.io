@@ -33,19 +33,13 @@ announcements:
   enabled: false
 ---
 
-I am a Ph.D. candidate in Information and Computer Engineering at Hansung University,
-advised by [Prof. Hwa-Jeong Seo](https://scholar.google.co.kr/citations?user=NJTYsz0AAAAJ) in the
-[CryptoCraft Lab](https://sites.google.com/view/cc-hs).
-My work centers on **platform-optimized cryptographic implementation**. I take algorithms designed on
-paper and squeeze real performance out of ARM, RISC-V, and GPU hardware.
+I am a Ph.D. candidate at Hansung University, working with [Prof. Hwa-Jeong Seo](https://scholar.google.co.kr/citations?user=NJTYsz0AAAAJ)
+in the [CryptoCraft Lab](https://sites.google.com/view/cc-hs). I make cryptographic algorithms run fast on real hardware:
+ARM and RISC-V microcontrollers, ARMv8 and x86 processors, and GPUs.
 
-Recent focus is **post-quantum cryptography (PQC)** benchmarking and engineering across
-the [KpqC](https://www.kpqc.or.kr/) and NIST PQC submissions, including hybrid TLS 1.3, joint-PKI
-infrastructure, and lightweight target platforms (Cortex-M, RV32). I also work on GPU-accelerated
-symmetric ciphers (CUDA, Apple Silicon Metal) and AI-agent-assisted workflows for cryptographic
-benchmarking and test-harness generation.
+My current work is on **post-quantum cryptography**. I benchmark and optimize KpqC and NIST PQC
+schemes, and study how they perform inside hybrid TLS 1.3 and PKI. I also build GPU implementations
+of block ciphers such as ARIA and LEA.
 
-{% assign pc = site.data.research_map.counts -%}
-Publications: **{{ pc.scie }} SCI(E) journal papers**{% if pc.journal > 0 %}, **{{ pc.journal }} in IACR TCHES**{% endif %},
-**{{ pc.kci }} KCI journal papers**, **{{ pc.conference }} international conference papers**, and
-**{{ pc.preprint }} preprints**. See the [publications](/en/publications/) page for the full list.
+Recent work appeared in [IACR TCHES 2026](https://doi.org/10.46586/tches.v2026.i4.575-596), and our GPU HCTR2-ARIA paper received
+the **Best Paper Award at WISA 2026**.
