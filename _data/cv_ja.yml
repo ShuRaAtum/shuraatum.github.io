@@ -91,9 +91,9 @@ cv:
       - name: プログラミング言語
         keywords: "C、Python、アセンブリ（ARM、RISC-V）"
       - name: 並列化・SIMD
-        keywords: "ARM NEON、CUDA、Metal（Apple Silicon）"
+        keywords: "ARM NEON、x86 AVX2/AVX-512、CUDA、Metal（Apple Silicon）"
       - name: 対象プラットフォーム
-        keywords: "ARM Cortex-M、ARMv8（AArch64）、RISC-V（RV32/RV64）、NVIDIA GPU、Apple M1 GPU"
+        keywords: "ARM Cortex-M、ARMv8（AArch64）、RISC-V（RV32/RV64）、x86-64、NVIDIA GPU、Apple M1 GPU"
       - name: 暗号
         keywords: "耐量子計算機暗号（KpqC、NIST PQC）、共通鍵暗号（AES、ARIA、LEA、PIPO、SM4、HIGHT、SEED）、ハッシュ（LSH、Argon2）、ハッシュベース署名（XMSS、SPHINCS+）"
       - name: プロトコル・フレームワーク
@@ -111,7 +111,7 @@ cv:
       - name: 国際会議
         summary: "13編（ICISC、WISA、PlatCon。WISA 2026とPlatCon 2022で最優秀論文賞）"
       - name: 韓国国内学会
-        summary: "14件以上の発表（CISC-S、CISC-W、ASK、ACK、地域支部大会）"
+        summary: "18件の発表（CISC-S、CISC-W、ASK、ACK、地域支部大会）"
 
     研究プロジェクト:
       - name: ブロックチェーン中核技術および未来革新人材育成（IITP）

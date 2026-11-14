@@ -91,9 +91,9 @@ cv:
       - name: 프로그래밍 언어
         keywords: "C, Python, Assembly (ARM, RISC-V)"
       - name: 병렬 처리, SIMD
-        keywords: "ARM NEON, CUDA, Metal (Apple Silicon)"
+        keywords: "ARM NEON, x86 AVX2/AVX-512, CUDA, Metal (Apple Silicon)"
       - name: 대상 플랫폼
-        keywords: "ARM Cortex-M, ARMv8 (AArch64), RISC-V (RV32/RV64), NVIDIA GPU, Apple M1 GPU"
+        keywords: "ARM Cortex-M, ARMv8 (AArch64), RISC-V (RV32/RV64), x86-64, NVIDIA GPU, Apple M1 GPU"
       - name: 암호
         keywords: "양자내성 (KpqC, NIST PQC), 대칭키 (AES, ARIA, LEA, PIPO, SM4, HIGHT, SEED), 해시 (LSH, Argon2), 해시 기반 서명 (XMSS, SPHINCS+)"
       - name: 프로토콜, 프레임워크
@@ -111,7 +111,7 @@ cv:
       - name: 국제 학회
         summary: "13편 (ICISC, WISA, PlatCon). WISA 2026과 PlatCon 2022에서 최우수논문상 수상"
       - name: 국내 학회
-        summary: "14편 이상 (CISC-S, CISC-W, ASK, ACK 및 지부 학술대회)"
+        summary: "18편 (CISC-S, CISC-W, ASK, ACK 및 지부 학술대회)"
 
     참여 과제:
       - name: 블록체인 핵심 기술 및 미래 혁신 인재 양성 (IITP)

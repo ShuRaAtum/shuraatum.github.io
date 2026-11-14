@@ -12,9 +12,11 @@ layout: default
   <header class="academic-page-header">
     <h1 class="academic-page-title">{{ page.title }}</h1>
     {% if cv_data.label %}<p class="academic-page-description">{{ cv_data.label }}</p>{% endif %}
-    {% if page.cv_pdf %}
+    {% if page.cv_pdfs %}
       <p class="cv-actions">
-        <a class="cv-pdf-link" href="{{ page.cv_pdf | relative_url }}" target="_blank" rel="noopener noreferrer">{{ s.cv.download_pdf | default: 'Download PDF' }}</a>
+        {% for pdf in page.cv_pdfs %}
+          <a class="cv-pdf-link" href="{{ pdf.file | relative_url }}" target="_blank" rel="noopener noreferrer">{{ s.cv[pdf.label] | default: 'Download PDF' }}</a>
+        {% endfor %}
       </p>
     {% endif %}
   </header>
@@ -26,9 +28,9 @@ layout: default
 
     {% if cv_data.location or cv_data.email %}
       <p class="cv-meta">
-        {% if cv_data.email %}<a href="mailto:{{ cv_data.email }}">{{ cv_data.email }}</a>{% endif %}
-        {% if cv_data.email and cv_data.location %} · {% endif %}
-        {% if cv_data.location %}{{ cv_data.location }}{% endif %}
+        {% if cv_data.email %}<a href="mailto:{{ cv_data.email }}">{{ cv_data.email }}</a>{% endif -%}
+        {%- if cv_data.email and cv_data.location %}, {% endif -%}
+        {%- if cv_data.location %}{{ cv_data.location }}{% endif %}
       </p>
     {% endif %}
 

@@ -11,7 +11,8 @@ home:
   advised_by: 지도교수
   contact_note: 이메일로 연락 주시면 가장 빠르게 답변드립니다.
 cv:
-  download_pdf: PDF 다운로드
+  full_pdf: 전체 이력서 (PDF, 영문)
+  research_pdf: 연구 요약 이력서 (PDF, 영문)
 publications:
   cited_by: "인용 %n회"
 blog:

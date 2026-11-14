@@ -11,7 +11,8 @@ home:
   advised_by: Advised by
   contact_note: Best reached by email. I respond fastest to short, specific messages.
 cv:
-  download_pdf: Download PDF
+  full_pdf: Full CV (PDF)
+  research_pdf: Research CV (PDF)
 publications:
   cited_by: "Cited by %n"
 blog:

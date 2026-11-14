@@ -50,13 +50,13 @@ cv:
         keywords: "Platform-optimized implementation, Post-quantum cryptography (KpqC, NIST PQC), Embedded crypto on ARM (Cortex-M, ARMv8/NEON) and RISC-V, GPU/CUDA-accelerated crypto, Symmetric-key crypto with SIMD parallelization, AI-agent-assisted cryptographic engineering"
 
     Awards:
-      - title: National Cryptography Competition, Excellence Award
+      - title: National Cryptography Contest, Excellence Award
         date: 2026
       - title: WISA 2026, Best Paper Award
         date: 2026
-      - title: National Cryptography Competition, Excellence Award
+      - title: National Cryptography Contest, Excellence Award
         date: 2025
-      - title: National Cryptography Competition, Excellence Award
+      - title: National Cryptography Contest, Excellence Award
         date: 2024
       - title: Side-Channel Information Analysis Competition, Chair's Award
         date: 2024
@@ -66,7 +66,7 @@ cv:
         date: 2023
       - title: Side-Channel Analysis Competition, KISA President's Award
         date: 2022
-      - title: National Cryptography Competition, Special Award
+      - title: National Cryptography Contest, Special Award
         date: 2022
       - title: PlatCon '22, Best Paper Award
         date: 2022
@@ -93,9 +93,9 @@ cv:
       - name: Programming Languages
         keywords: "C, Python, Assembly (ARM, RISC-V)"
       - name: Parallel & SIMD
-        keywords: "ARM NEON, CUDA, Metal (Apple Silicon)"
+        keywords: "ARM NEON, x86 AVX2/AVX-512, CUDA, Metal (Apple Silicon)"
       - name: Target Platforms
-        keywords: "ARM Cortex-M, ARMv8 (AArch64), RISC-V (RV32/RV64), NVIDIA GPU, Apple M1 GPU"
+        keywords: "ARM Cortex-M, ARMv8 (AArch64), RISC-V (RV32/RV64), x86-64, NVIDIA GPU, Apple M1 GPU"
       - name: Cryptography
         keywords: "Post-Quantum (KpqC, NIST PQC), Symmetric-Key (AES, ARIA, LEA, PIPO, SM4, HIGHT, SEED), Hash (LSH, Argon2), Hash-Based Signatures (XMSS, SPHINCS+)"
       - name: Protocols & Frameworks
@@ -113,7 +113,7 @@ cv:
       - name: International Conferences
         summary: "13 papers (ICISC, WISA, PlatCon), including Best Paper Awards at WISA 2026 and PlatCon 2022"
       - name: Domestic Conferences (Korea)
-        summary: "14+ presentations (CISC-S, CISC-W, ASK, ACK, regional chapters)"
+        summary: "18 presentations (CISC-S, CISC-W, ASK, ACK, regional chapters)"
 
     Research Projects:
       - name: Blockchain Core Technologies & Future Innovative Talent Training (IITP)

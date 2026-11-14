@@ -12,7 +12,8 @@ home:
   affil_separator: "、"
   contact_note: ご連絡はメールでお願いします。最も早く返信できます。
 cv:
-  download_pdf: PDFをダウンロード（英語版）
+  full_pdf: 全体版CV（PDF・英語）
+  research_pdf: 研究要約版CV（PDF・英語）
 publications:
   cited_by: "被引用 %n件"
 blog:
