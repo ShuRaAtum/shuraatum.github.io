@@ -5,11 +5,11 @@ permalink: /ja/
 lang: ja
 display_name: オム・シウ
 
-role: "漢城大学校 情報コンピュータ工学科 博士課程"
+role: "Hansung University 情報コンピュータ工学科 博士課程"
 lab:
   name: CryptoCraft Lab
   url: https://sites.google.com/view/cc-hs
-university: 漢城大学校（韓国・ソウル）
+university: Hansung University（韓国・ソウル）
 advisor:
   name: ソ・ファジョン（Hwa-Jeong Seo）教授
   url: https://scholar.google.co.kr/citations?user=NJTYsz0AAAAJ
@@ -34,7 +34,7 @@ announcements:
   enabled: false
 ---
 
-韓国・漢城大学校 情報コンピュータ工学科の博士課程に在籍し、
+韓国・Hansung University 情報コンピュータ工学科の博士課程に在籍し、
 [CryptoCraft Lab](https://sites.google.com/view/cc-hs)で
 [ソ・ファジョン教授](https://scholar.google.co.kr/citations?user=NJTYsz0AAAAJ)の指導のもと、
 **プラットフォームに最適化した暗号実装**を研究しています。

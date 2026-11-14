@@ -1,11 +1,11 @@
 cv:
   name: オム・シウ（Si-Woo Eum）
-  label: 博士課程 · CryptoCraft Lab · 漢城大学校
+  label: 博士課程 · CryptoCraft Lab · Hansung University
   email: shuraatum@gmail.com
   location: 韓国・ソウル
   image: ""
   summary: >
-    漢城大学校 情報コンピュータ工学科の博士課程に在籍し、プラットフォームに最適化した暗号実装を専門としています。
+    Hansung University 情報コンピュータ工学科の博士課程に在籍し、プラットフォームに最適化した暗号実装を専門としています。
     耐量子計算機暗号（PQC）のベンチマークと、組込み・GPU向け暗号エンジニアリングを中心に研究しており、
     SCI(E)論文誌や国際会議での発表に加え、韓国の国家暗号研究プロジェクトにも複数参加しています。
 
@@ -19,7 +19,7 @@ cv:
 
   sections:
     学歴:
-      - institution: 漢城大学校
+      - institution: Hansung University
         location: 韓国・ソウル
         area: 情報コンピュータ工学科
         studyType: 博士課程
@@ -29,14 +29,14 @@ cv:
           - 指導教員 — ソ・ファジョン（Hwa-Jeong Seo）教授、CryptoCraft Lab
           - 研究テーマ — プラットフォーム最適化暗号実装
 
-      - institution: 漢城大学校
+      - institution: Hansung University
         location: 韓国・ソウル
         area: IT融合工学科
         studyType: 修士
         start_date: 2021-03
         end_date: 2023-02
 
-      - institution: 漢城大学校
+      - institution: Hansung University
         location: 韓国・ソウル
         area: IT融合工学科
         studyType: 学士
@@ -60,7 +60,7 @@ cv:
         date: 2024
       - title: サイドチャネル情報分析コンテスト — 入賞
         date: 2023
-      - title: 漢城大学校大学院 — 優秀修士論文賞
+      - title: Hansung University 大学院 — 優秀修士論文賞
         date: 2023
       - title: サイドチャネル分析コンテスト — KISA院長賞
         date: 2022

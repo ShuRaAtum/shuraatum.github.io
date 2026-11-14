@@ -3,7 +3,8 @@
 # Reads _bibliography/papers.bib directly and exposes the result as
 # `site.data.research_map`, so the map always matches the bibliography.
 # Each entry opts in with a custom `platform` field holding one or more
-# space-separated row keys (see ROWS). Entries without it are skipped.
+# space-separated row keys (see ROWS). Entries without it are left off the
+# map but still counted by venue type.
 
 require "bibtex"
 
@@ -30,7 +31,16 @@ module ResearchMap
       return unless File.exist?(path)
 
       self_last = Array(site.config.dig("scholar", "last_name")).map(&:to_s)
-      papers = BibTeX.open(path).data.select { |e| e.is_a?(BibTeX::Entry) }.filter_map do |e|
+      entries = BibTeX.open(path).data.select { |e| e.is_a?(BibTeX::Entry) }
+
+      # Publication counts cover every entry, including ones left off the map.
+      counts = Hash.new(0)
+      entries.each do |e|
+        abbr = e.has_field?(:abbr) ? clean(e[:abbr]) : ""
+        counts[VENUE_TYPES.fetch(abbr, "other")] += 1
+      end
+
+      papers = entries.filter_map do |e|
         next unless e.has_field?(:platform) && e.has_field?(:year)
 
         first_author = e.author&.first
@@ -54,9 +64,6 @@ module ResearchMap
           end,
         }
       end.reject { |r| r["cells"].all?(&:empty?) }
-
-      counts = Hash.new(0)
-      papers.each { |p| counts[VENUE_TYPES.fetch(p["abbr"], "other")] += 1 }
 
       site.data["research_map"] = {
         "years" => years,
