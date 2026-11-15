@@ -39,7 +39,9 @@ ARM and RISC-V microcontrollers, ARMv8 and x86 processors, and GPUs.
 
 My current work is on **post-quantum cryptography**. I benchmark and optimize KpqC and NIST PQC
 schemes, and study how they perform inside hybrid TLS 1.3 and PKI. I also build GPU implementations
-of block ciphers such as ARIA and LEA.
+of block ciphers such as ARIA and LEA. Most recently, I have been implementing ciphers as bit-exact
+ReLU neural networks and testing whether ML runtimes on GPUs, NPUs and MCUs execute them correctly
+([ePrint 2026/2850](https://eprint.iacr.org/2026/2850)).
 
 Recent work appeared in [IACR TCHES 2026](https://doi.org/10.46586/tches.v2026.i4.575-596), and our GPU HCTR2-ARIA paper received
 the **Best Paper Award at WISA 2026**.

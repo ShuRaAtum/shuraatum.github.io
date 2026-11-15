@@ -109,7 +109,7 @@ cv:
       - name: KCI Journals
         summary: "11 papers (JKIISC, KTCCS, JKIICE, SMJ)"
       - name: Preprints
-        summary: "14 papers (Cryptology ePrint Archive)"
+        summary: "15 papers (Cryptology ePrint Archive)"
       - name: International Conferences
         summary: "13 papers (ICISC, WISA, PlatCon), including Best Paper Awards at WISA 2026 and PlatCon 2022"
       - name: Domestic Conferences (Korea)

@@ -107,7 +107,7 @@ cv:
       - name: KCI 論文誌
         summary: "11編（JKIISC、KTCCS、JKIICE、SMJ）"
       - name: プレプリント
-        summary: "14編（Cryptology ePrint Archive）"
+        summary: "15編（Cryptology ePrint Archive）"
       - name: 国際会議
         summary: "13編（ICISC、WISA、PlatCon。WISA 2026とPlatCon 2022で最優秀論文賞）"
       - name: 韓国国内学会
