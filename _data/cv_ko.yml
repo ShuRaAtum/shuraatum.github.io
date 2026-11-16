@@ -26,8 +26,8 @@ cv:
         start_date: 2023-03
         end_date: 재학중
         highlights:
-          - 지도교수: 서화정 교수, CryptoCraft Lab
-          - 연구 주제: 플랫폼 최적화 암호 구현
+          - "지도교수: 서화정 교수, CryptoCraft Lab"
+          - "연구 주제: 플랫폼 최적화 암호 구현"
 
       - institution: 한성대학교
         location: 서울, 대한민국

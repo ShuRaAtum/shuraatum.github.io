@@ -28,8 +28,8 @@ cv:
         start_date: 2023-03
         end_date: Present
         highlights:
-          - Advisor: Prof. Hwa-Jeong Seo, CryptoCraft Lab
-          - Research focus: platform-optimized cryptographic implementation
+          - "Advisor: Prof. Hwa-Jeong Seo, CryptoCraft Lab"
+          - "Research focus: platform-optimized cryptographic implementation"
 
       - institution: Hansung University
         location: Seoul, South Korea
