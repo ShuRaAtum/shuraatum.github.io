@@ -69,6 +69,7 @@ module ResearchMap
         "years" => years,
         "rows" => rows,
         "total" => papers.size,
+        "all" => entries.size,
         "first_author" => papers.count { |p| p["first"] },
         "counts" => counts,
       }

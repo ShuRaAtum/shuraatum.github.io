@@ -5,11 +5,11 @@ cv:
   location: Seoul, South Korea
   image: ""
   summary: >
-    Ph.D. candidate in Information and Computer Engineering at Hansung University,
-    specializing in platform-optimized cryptographic implementation. Active researcher
-    in post-quantum cryptography (PQC) benchmarking and embedded/GPU-accelerated
-    cryptographic engineering, with publications across SCI(E) journals and international
-    conferences, and contributions to multiple national cryptography research projects.
+    Ph.D. candidate at Hansung University specializing in cryptographic software optimization
+    on ARM, RISC-V, and GPUs. Research spans symmetric-key implementations, post-quantum
+    cryptography (PQC), and TLS/X.509 integration, connecting instruction and memory
+    optimizations with cross-platform performance evaluation. First author of a TCHES 2026
+    article and a WISA 2026 Best Paper Award paper.
 
   social_networks:
     - network: GitHub

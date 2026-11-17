@@ -13,7 +13,9 @@
   <section class="research-map" aria-labelledby="research-map-heading">
     <h2 id="research-map-heading" class="research-map-heading">{{ t.heading }}</h2>
     <p class="research-map-summary">
-      {{ t.summary | replace: '%n', map.total | replace: '%from', first_year | replace: '%to', last_year }}
+      {{ t.summary | replace: '%n', map.all | replace: '%from', first_year | replace: '%to', last_year }}
+      {%- assign unplaced = map.all | minus: map.total -%}
+      {%- if unplaced > 0 -%}{{ t.unplaced | replace: '%m', unplaced }}{%- endif -%}
     </p>
 
     <div class="research-map-grid" style="--years: {{ year_count }}" role="table" aria-label="{{ t.heading }}">

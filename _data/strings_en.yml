@@ -22,6 +22,7 @@ lang:
 research_map:
   heading: Research by platform
   summary: "%n papers from %from to %to. Each dot is one paper, and filled dots are first-author work."
+  unplaced: " Papers with no specific target platform are left off (%m)."
   first: First author
   co: Co-author
   hint: Point at a dot to see the paper, or select it to open it in the publication list.

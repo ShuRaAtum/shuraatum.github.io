@@ -46,9 +46,12 @@
           <li class="nav-item {% if page.url contains cv_url %}active{% endif %}">
             <a class="nav-link" href="{{ cv_url | relative_url }}">{{ s.nav.cv }}</a>
           </li>
+          {%- comment -%} Blog stays out of the menu until there is a post. {%- endcomment -%}
+          {%- if site.posts.size > 0 -%}
           <li class="nav-item {% if page.url contains blog_url %}active{% endif %}">
             <a class="nav-link" href="{{ blog_url | relative_url }}">{{ s.nav.blog }}</a>
           </li>
+          {%- endif -%}
 
           <!-- Language Switcher -->
           <li class="nav-item">
